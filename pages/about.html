@@ -30,14 +30,12 @@
             <main class="about-container">
                 <!-- Sidebar -->
                 <aside class="sidebar">
-                    <!-- Restructured personal-info section with flat hierarchy -->
+                    <!-- Restructured personal-info with Bio, Experience, Skills, Education, Interests -->
                     <div class="sidebar-section">
                         <button class="section-toggle active" data-section="personal">
                             <span class="toggle-icon">▼</span>
                             <span>personal-info</span>
                         </button>
-                        <!-- Added border-divider directly under section-toggle button -->
-                        <div class="section-divider"></div>
                         <div class="section-content active" id="personal">
                             <div class="folder-item">
                                 <span class="folder-icon">📝</span>
@@ -46,6 +44,10 @@
                             <div class="folder-item">
                                 <span class="folder-icon">💼</span>
                                 <button class="file-link" data-file="experience">experience</button>
+                            </div>
+                            <div class="folder-item">
+                                <span class="folder-icon">⚙️</span>
+                                <button class="file-link" data-file="skills">skills</button>
                             </div>
                             <div class="folder-item">
                                 <span class="folder-icon">🎓</span>
@@ -64,8 +66,6 @@
                             <span class="toggle-icon">▼</span>
                             <span>contacts</span>
                         </button>
-                        <!-- Added border-divider directly under section-toggle button -->
-                        <div class="section-divider"></div>
                         <div class="section-content active" id="contacts">
                             <div class="contact-item">
                                 <span class="contact-icon">✉️</span>
@@ -81,6 +81,7 @@
 
                 <!-- Editor Panel -->
                 <div class="editor-panel">
+                    <!-- Active tab bar extends to right edge, pushes panel down -->
                     <div class="tab-bar">
                         <div class="tab active" data-file="bio">
                             <span id="currentTab">bio</span>
@@ -112,61 +113,40 @@
                     </div>
                 </div>
 
-                <!-- Code Snippets Panel -->
+                <!-- Replaced code snippets with Gameplay Systems Panel -->
                 <div class="snippets-panel">
                     <div class="snippets-header">
-                        <p class="comment">// Code snippet showcase:</p>
+                        <p class="comment">// Gameplay Systems</p>
                     </div>
                     
-                    <div class="snippet-card">
-                        <div class="snippet-header">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23607B96'/%3E%3Ctext x='20' y='28' font-size='20' text-anchor='middle' fill='white' font-family='monospace'%3EAN%3C/text%3E%3C/svg%3E" alt="User" class="user-avatar">
-                            <div class="snippet-info">
-                                <a href="https://github.com/ayushnayak062" target="_blank" class="username">@ayushnayak062</a>
-                                <p class="snippet-date">Created 5 months ago</p>
-                            </div>
-                            <div class="snippet-stats">
-                                <button class="details-btn">💬 details</button>
-                                <span class="stars">⭐ 3 stars</span>
-                            </div>
+                    <div class="gameplay-systems">
+                        <div class="system-category">
+                            <h3 class="category-title">[Gameplay Systems]</h3>
+                            <ul class="system-list">
+                                <li>Player Controller (state-driven)</li>
+                                <li>Enemy AI (FSM / Behavior Trees)</li>
+                                <li>Combat & Interaction Loop</li>
+                                <li>Physics-based Interactions</li>
+                                <li>Animation State Synchronization</li>
+                            </ul>
                         </div>
-                        <div class="snippet-code">
-<pre><code><span class="keyword">function</span> <span class="function">initializeModelChunk</span><span class="operator">&lt;</span><span class="type">T</span><span class="operator">&gt;</span>(chunk: ResolvedModelChunk): T {
-  <span class="keyword">const</span> value: T = <span class="function">parseModel</span>(chunk._response, chunk._value);
-  <span class="keyword">const</span> initializedChunk: InitializedChunk<span class="operator">&lt;</span><span class="type">T</span><span class="operator">&gt;</span> = (chunk: <span class="keyword">any</span>);
-  initializedChunk._status = INITIALIZED;
-  initializedChunk._value = value;
-  <span class="keyword">return</span> value;
-}</code></pre>
-                        </div>
-                    </div>
 
-                    <div class="snippet-card">
-                        <div class="snippet-header">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23607B96'/%3E%3Ctext x='20' y='28' font-size='20' text-anchor='middle' fill='white' font-family='monospace'%3EAN%3C/text%3E%3C/svg%3E" alt="User" class="user-avatar">
-                            <div class="snippet-info">
-                                <a href="https://github.com/ayushnayak062" target="_blank" class="username">@ayushnayak062</a>
-                                <p class="snippet-date">Created 9 months ago</p>
-                            </div>
-                            <div class="snippet-stats">
-                                <button class="details-btn">💬 details</button>
-                                <span class="stars">⭐ 0 stars</span>
-                            </div>
+                        <div class="system-category">
+                            <h3 class="category-title">[XR Systems]</h3>
+                            <ul class="system-list">
+                                <li>Input Abstraction (Controllers / Gestures)</li>
+                                <li>Haptics Integration</li>
+                                <li>Training Scenario Logic</li>
+                                <li>Real-time Feedback Systems</li>
+                            </ul>
                         </div>
-                        <div class="snippet-code">
-<pre><code><span class="keyword">export function</span> <span class="function">parseModelTuple</span>(
-  response: Response,
-  value: {[key: string]: JSONValue} | $ReadOnlyArray<span class="operator">&lt;</span>JSONValue<span class="operator">&gt;</span>,
-): any {
-  <span class="keyword">const</span> tuple: [mixed, mixed, mixed, mixed] = (value: <span class="keyword">any</span>);
 
-  <span class="keyword">if</span> (tuple[<span class="number">0</span>] === REACT_ELEMENT_TYPE) {
-    <span class="comment">// TODO: Consider having React just directly accept these arrays as elements.</span>
-    <span class="comment">// Or even change the ReactElement type to be an array.</span>
-    <span class="keyword">return</span> createElement(tuple[<span class="number">1</span>], tuple[<span class="number">2</span>], tuple[<span class="number">3</span>]);
-  }
-  <span class="keyword">return</span> value;
-}</code></pre>
+                        <div class="system-category">
+                            <h3 class="category-title">[Engine Pipeline]</h3>
+                            <ul class="system-list">
+                                <li>Input → Gameplay Logic → AI → Physics → Animation → Rendering</li>
+                                <li>Target Frame Rate: 60 FPS</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

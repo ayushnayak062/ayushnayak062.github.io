@@ -128,6 +128,49 @@
   font-size: 0.7rem;
 }
 
+/* Skills section styling within personal-info dropdown */
+.skills-section {
+  padding: var(--spacing-sm) 0;
+}
+
+.skills-category {
+  margin-bottom: var(--spacing-md);
+}
+
+.skills-category:last-child {
+  margin-bottom: 0;
+}
+
+.skills-title {
+  color: var(--accent-cyan);
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-sm);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: var(--spacing-md);
+}
+
+.skills-list li {
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  padding: 0.15rem 0;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: "-";
+  position: absolute;
+  left: -0.75rem;
+  color: var(--text-secondary);
+}
+
 /* Typing animation */
 @keyframes blink {
   0%,
