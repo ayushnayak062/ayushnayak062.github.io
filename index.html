@@ -1,33 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ayush Nayak – Unity Gameplay Engineer</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0e1117;
-      color: #e6edf3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    .container {
-      text-align: center;
-    }
-    p {
-      color: #9da7b1;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Nayak - Unity Game Developer</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/terminal.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Ayush Nayak</h1>
-    <p>Unity Gameplay Engineer | XR & Systems</p>
-    <p>Portfolio coming soon.</p>
-  </div>
+    <!-- Wrapped in viewport container for centered 16:9 app window -->
+    <div class="viewport">
+        <div class="app-window">
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <span class="nav-name">ayush-nayak</span>
+                    <a href="index.html" class="nav-link active">_hello</a>
+                    <a href="pages/about.html" class="nav-link">_about-me</a>
+                    <a href="pages/projects.html" class="nav-link">_projects</a>
+                </div>
+                <div class="nav-right">
+                    <a href="pages/contact.html" class="nav-link">_contact-me</a>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="hero-container">
+                <div class="hero-content">
+                    <div class="intro-section">
+                        <p class="intro-greeting">Hi all. I am</p>
+                        <h1 class="hero-title">Ayush Nayak</h1>
+                        <p class="hero-subtitle"><span class="accent">&gt;</span> Unity Game Developer | Gameplay Engineer | XR Developer</p>
+                        
+                        <div class="code-block">
+                            <p class="comment">// explore the system architecture</p>
+                            <p class="comment">// find my profile on Github:</p>
+                            <p class="code-line">
+                                <span class="keyword">const</span> 
+                                <span class="variable">githubLink</span> = 
+                                <a href="https://github.com/ayushnayak062" target="_blank" class="string">"https://github.com/ayushnayak062"</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Updated system section with Run System button -->
+                    <div class="system-section">
+                        <div class="system-container">
+                            <div class="system-title">
+                                <span class="comment">// Gameplay System Architecture</span>
+                            </div>
+                            
+                            <div class="system-flow">
+                                <div class="system-node" data-step="0">
+                                    <div class="node-icon">⌨️</div>
+                                    <div class="node-label">Input</div>
+                                </div>
+                                
+                                <div class="flow-arrow">→</div>
+                                
+                                <div class="system-node" data-step="1">
+                                    <div class="node-icon">🎮</div>
+                                    <div class="node-label">Gameplay Logic</div>
+                                </div>
+                                
+                                <div class="flow-arrow">→</div>
+                                
+                                <div class="system-node" data-step="2">
+                                    <div class="node-icon">🤖</div>
+                                    <div class="node-label">AI</div>
+                                </div>
+                                
+                                <div class="flow-arrow">→</div>
+                                
+                                <div class="system-node" data-step="3">
+                                    <div class="node-icon">⚡</div>
+                                    <div class="node-label">Physics</div>
+                                </div>
+                                
+                                <div class="flow-arrow">→</div>
+                                
+                                <div class="system-node" data-step="4">
+                                    <div class="node-icon">🎨</div>
+                                    <div class="node-label">Rendering</div>
+                                </div>
+                                
+                                <div class="flow-arrow">→</div>
+                                
+                                <div class="system-node" data-step="5">
+                                    <div class="node-icon">📺</div>
+                                    <div class="node-label">Output</div>
+                                </div>
+                            </div>
+                            
+                            <div class="system-controls">
+                                <button id="runSystemBtn" class="run-system-btn">run-system</button>
+                            </div>
+                            
+                            <div class="system-info">
+                                <p class="comment">// Unity Engine Pipeline</p>
+                                <p class="comment">// Frame Rate: 60 FPS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="footer-left">
+                    <span class="footer-text">find me in:</span>
+                    <a href="https://linkedin.com/in/ayushnayak062" target="_blank" class="footer-icon" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/ayushnayak062" target="_blank" class="footer-github">
+                        <span>@ayushnayak062</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/terminal.js"></script>
 </body>
 </html>

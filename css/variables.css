@@ -1,0 +1,54 @@
+/* CSS Variables for consistent theming */
+:root {
+  /* Colors - Dark VS Code theme */
+  --bg-primary: #010c15;
+  --bg-secondary: #011221;
+  --bg-tertiary: #011627;
+  --bg-code: #01111d;
+
+  /* Borders and Lines */
+  --border-color: #1e2d3d;
+  --border-active: #fea55f;
+
+  /* Text Colors */
+  --text-primary: #607b96;
+  --text-secondary: #e5e9f0;
+  --text-white: #ffffff;
+  --text-comment: #607b96;
+
+  /* Syntax Highlighting */
+  --color-keyword: #c792ea;
+  --color-function: #82aaff;
+  --color-string: #e99287;
+  --color-variable: #e5e9f0;
+  --color-number: #f78c6c;
+  --color-class: #ffcb6b;
+  --color-property: #4ec9b0;
+
+  /* Accent Colors */
+  --accent-orange: #fea55f;
+  --accent-cyan: #43d9ad;
+  --accent-purple: #c98bdf;
+  --accent-blue: #4d5bce;
+
+  /* Gradient Background */
+  --gradient-teal: #43d9ad;
+  --gradient-blue: #4d5bce;
+
+  /* Fonts */
+  --font-mono: "Fira Code", "Consolas", "Monaco", "Courier New", monospace;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+}

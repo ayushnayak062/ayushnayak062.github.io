@@ -1,0 +1,140 @@
+/* Replaced game styles with system architecture diagram styles */
+.system-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.system-container {
+  background: var(--bg-code);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  max-width: 600px;
+}
+
+.system-title {
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.system-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.system-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  min-width: 80px;
+  transition: all 0.4s ease;
+  opacity: 0.5;
+}
+
+/* Active state for system flow visualization */
+.system-node.active {
+  opacity: 1;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(67, 217, 173, 0.4);
+  transform: scale(1.05);
+}
+
+.node-icon {
+  font-size: 1.5rem;
+}
+
+.node-label {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.flow-arrow {
+  color: var(--accent-cyan);
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.3;
+  transition: all 0.4s ease;
+}
+
+.flow-arrow.active {
+  opacity: 1;
+}
+
+/* Added controls section with run button */
+.system-controls {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Enhanced button styling with larger size and hover states */
+.run-system-btn {
+  background: var(--accent-orange);
+  color: var(--bg-primary);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: 2px solid var(--accent-orange);
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: lowercase;
+}
+
+.run-system-btn:hover {
+  background: transparent;
+  color: var(--accent-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(254, 165, 95, 0.4);
+}
+
+.run-system-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(254, 165, 95, 0.4);
+}
+
+.run-system-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.system-info {
+  text-align: center;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.system-info .comment {
+  margin: var(--spacing-xs) 0;
+}
+
+/* Typing animation */
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor::after {
+  content: "|";
+  animation: blink 1s infinite;
+}

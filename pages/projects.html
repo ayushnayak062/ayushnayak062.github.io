@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ayush Nayak</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/terminal.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Wrapped in viewport container for global app window -->
+    <div class="viewport">
+        <div class="app-window">
+            <!-- Updated navigation structure to match homepage -->
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <!-- Updated nav-name to use fixed-width matching system info width -->
+                    <span class="nav-name">ayush-nayak</span>
+                    <a href="../index.html" class="nav-link">_hello</a>
+                    <a href="about.html" class="nav-link">_about-me</a>
+                    <a href="projects.html" class="nav-link active">_projects</a>
+                </div>
+                <div class="nav-right">
+                    <a href="contact.html" class="nav-link">_contact-me</a>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="projects-container">
+                <!-- Sidebar Filters -->
+                <aside class="sidebar">
+                    <div class="sidebar-section">
+                        <button class="section-toggle active">
+                            <span class="toggle-icon">▼</span>
+                            <span>projects</span>
+                        </button>
+                        <div class="section-content active">
+                            <label class="filter-item">
+                                <input type="checkbox" value="Unity" checked>
+                                <span class="tech-icon">🎮</span>
+                                <span>Unity</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="VR">
+                                <span class="tech-icon">🥽</span>
+                                <span>VR</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="Multiplayer">
+                                <span class="tech-icon">👥</span>
+                                <span>Multiplayer</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="AI">
+                                <span class="tech-icon">🤖</span>
+                                <span>AI</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="Mobile">
+                                <span class="tech-icon">📱</span>
+                                <span>Mobile</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="WebGL">
+                                <span class="tech-icon">🌐</span>
+                                <span>WebGL</span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Projects Grid -->
+                <div class="projects-content">
+                    <div class="filter-tags" id="filterTags">
+                        <span class="active-filter">
+                            Unity
+                            <button class="remove-filter" data-filter="Unity">×</button>
+                        </span>
+                    </div>
+
+                    <div class="projects-grid" id="projectsGrid">
+                        <div class="project-card" data-tags="Unity VR Multiplayer AI">
+                            <div class="project-header">
+                                <span class="project-number">Project 1</span>
+                                <span class="project-subtitle">// _vr-zombie-shooter</span>
+                            </div>
+                            <div class="project-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF6B9D;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23C239B3;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='200' fill='url(%23grad1)'/%3E%3Ctext x='150' y='100' font-family='monospace' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'%3EVR Zombie Game%3C/text%3E%3C/svg%3E" alt="VR Zombie Shooter">
+                                <button class="settings-btn" aria-label="Project settings">⚙️</button>
+                            </div>
+                            <div class="project-info">
+                                <p class="project-description">Co-op VR zombie shooter with free-roam gameplay. Features enemy AI, haptic suit integration, and multiplayer syncing.</p>
+                                <button class="view-project-btn">view-project</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-tags="Unity VR">
+                            <div class="project-header">
+                                <span class="project-number">Project 2</span>
+                                <span class="project-subtitle">// _vr-training-sim</span>
+                            </div>
+                            <div class="project-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234DEEEA;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2374EE15;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='200' fill='url(%23grad2)'/%3E%3Ctext x='150' y='100' font-family='monospace' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'%3ETraining Simulator%3C/text%3E%3C/svg%3E" alt="VR Training Simulator">
+                                <button class="settings-btn" aria-label="Project settings">⚙️</button>
+                            </div>
+                            <div class="project-info">
+                                <p class="project-description">VR training simulator for heavy machinery operators. Real-time monitoring portal and error-injection systems.</p>
+                                <button class="view-project-btn">view-project</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-tags="Unity Mobile">
+                            <div class="project-header">
+                                <span class="project-number">Project 3</span>
+                                <span class="project-subtitle">// _mobile-game</span>
+                            </div>
+                            <div class="project-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FFE259;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FFA751;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='200' fill='url(%23grad3)'/%3E%3Ctext x='150' y='100' font-family='monospace' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'%3EMobile Game%3C/text%3E%3C/svg%3E" alt="Mobile Game">
+                                <button class="settings-btn" aria-label="Project settings">⚙️</button>
+                            </div>
+                            <div class="project-info">
+                                <p class="project-description">Coming Soon - Mobile game project with Unity Ads integration and cloud save functionality.</p>
+                                <button class="view-project-btn">view-project</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-tags="Unity WebGL">
+                            <div class="project-header">
+                                <span class="project-number">Project 4</span>
+                                <span class="project-subtitle">// _webgl-prototype</span>
+                            </div>
+                            <div class="project-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Cdefs%3E%3ClinearGradient id='grad4' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%235433FF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2320BDFF;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='200' fill='url(%23grad4)'/%3E%3Ctext x='150' y='100' font-family='monospace' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'%3EWebGL Game%3C/text%3E%3C/svg%3E" alt="WebGL Prototype">
+                                <button class="settings-btn" aria-label="Project settings">⚙️</button>
+                            </div>
+                            <div class="project-info">
+                                <p class="project-description">Coming Soon - Browser-based game prototype built with Unity WebGL for instant play experiences.</p>
+                                <button class="view-project-btn">view-project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="footer-left">
+                    <span class="footer-text">find me in:</span>
+                    <a href="https://linkedin.com/in/ayushnayak062" target="_blank" class="footer-icon" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/ayushnayak062" target="_blank" class="footer-github">
+                        <span>@ayushnayak062</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+    <script>
+        // Project filtering
+        const checkboxes = document.querySelectorAll('.filter-item input[type="checkbox"]');
+        const projectCards = document.querySelectorAll('.project-card');
+        const filterTags = document.getElementById('filterTags');
+
+        function updateFilters() {
+            const activeFilters = Array.from(checkboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+
+            // Update tags display
+            filterTags.innerHTML = activeFilters.map(filter => `
+                <span class="active-filter">
+                    ${filter}
+                    <button class="remove-filter" data-filter="${filter}">×</button>
+                </span>
+            `).join('');
+
+            // Filter projects
+            projectCards.forEach(card => {
+                const tags = card.dataset.tags.split(' ');
+                const matches = activeFilters.length === 0 || 
+                    activeFilters.some(filter => tags.includes(filter));
+                card.style.display = matches ? 'block' : 'none';
+            });
+
+            // Add event listeners to remove buttons
+            document.querySelectorAll('.remove-filter').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.dataset.filter;
+                    const checkbox = Array.from(checkboxes).find(cb => cb.value === filter);
+                    if (checkbox) checkbox.checked = false;
+                    updateFilters();
+                });
+            });
+        }
+
+        checkboxes.forEach(cb => cb.addEventListener('change', updateFilters));
+        updateFilters();
+    </script>
+</body>
+</html>

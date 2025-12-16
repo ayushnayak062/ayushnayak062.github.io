@@ -1,0 +1,124 @@
+/* Updated responsive behavior for global app window system */
+@media (max-width: 1024px) {
+  /* Allow viewport to adapt on smaller screens */
+  .viewport {
+    padding: 1rem;
+  }
+
+  .app-window {
+    aspect-ratio: auto;
+    max-height: none;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .system-section {
+    width: 100%;
+  }
+
+  .about-container,
+  .projects-container,
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .snippets-panel,
+  .code-preview-panel {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  /* Reset nav-name width on smaller screens */
+  .nav-name {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile uses full width */
+  .viewport {
+    padding: 0;
+  }
+
+  .app-window {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-container {
+    padding: var(--spacing-md);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-left,
+  .footer-right {
+    font-size: 0.875rem;
+  }
+
+  .footer-text {
+    display: none;
+  }
+
+  .system-flow {
+    gap: var(--spacing-sm);
+  }
+
+  .system-node {
+    min-width: 60px;
+    padding: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    height: auto;
+  }
+
+  .nav-left {
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .system-container {
+    padding: var(--spacing-md);
+  }
+}
