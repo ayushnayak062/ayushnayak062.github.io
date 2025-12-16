@@ -81,45 +81,68 @@ main {
 }
 
 /* Footer */
+/* Restructured footer for single continuous terminal bar */
 .main-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: var(--bg-tertiary);
-  border-top: 2px solid var(--border-color);
-  height: 50px;
-  padding: 0 var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  height: 48px;
+  padding: 0;
   flex-shrink: 0;
 }
 
 .footer-left {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  height: 100%;
+  padding-left: var(--spacing-md);
+  border-right: 1px solid var(--border-color);
 }
 
 .footer-text {
   color: var(--text-primary);
   margin-right: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
 }
 
-.footer-icon,
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 var(--spacing-md);
+  border-left: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.footer-icon:hover {
+  color: var(--text-white);
+  background: var(--bg-secondary);
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .footer-github {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-xs) var(--spacing-sm);
+  gap: var(--spacing-sm);
+  height: 100%;
+  padding: 0 var(--spacing-md);
   border-left: 1px solid var(--border-color);
   color: var(--text-primary);
+  transition: var(--transition);
 }
 
-.footer-icon:hover,
 .footer-github:hover {
   color: var(--text-white);
-}
-
-.footer-github {
-  border-right: 1px solid var(--border-color);
+  background: var(--bg-secondary);
 }
 
 /* Hero Page */

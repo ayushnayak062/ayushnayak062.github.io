@@ -1,4 +1,5 @@
 /* Replaced game styles with system architecture diagram styles */
+/* Reduced system section size and spacing */
 .system-section {
   flex: 1;
   display: flex;
@@ -12,14 +13,14 @@
   background: var(--bg-code);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: var(--spacing-lg);
-  max-width: 600px;
+  padding: var(--spacing-md);
+  max-width: 500px;
   max-height: 100%;
   overflow-y: auto;
 }
 
 .system-title {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   text-align: center;
 }
 
@@ -28,20 +29,20 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
 }
 
 .system-node {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-sm);
+  gap: 4px;
+  padding: var(--spacing-xs);
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  min-width: 70px;
+  min-width: 60px;
   transition: all 0.4s ease;
   opacity: 0.5;
 }
@@ -55,18 +56,18 @@
 }
 
 .node-icon {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 .node-label {
   color: var(--text-primary);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-align: center;
 }
 
 .flow-arrow {
   color: var(--accent-cyan);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
   opacity: 0.3;
   transition: all 0.4s ease;
@@ -79,8 +80,8 @@
 /* Added controls section with run button */
 .system-controls {
   text-align: center;
-  margin-bottom: var(--spacing-sm);
-  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -118,13 +119,13 @@
 
 .system-info {
   text-align: center;
-  padding-top: var(--spacing-sm);
+  padding-top: var(--spacing-xs);
   border-top: 1px solid var(--border-color);
 }
 
 .system-info .comment {
   margin: 0.25rem 0;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 /* Typing animation */
