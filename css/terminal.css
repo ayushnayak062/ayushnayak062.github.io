@@ -144,3 +144,15 @@
   content: "|";
   animation: blink 1s infinite;
 }
+
+/* Contact links styling */
+.contact-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+}
