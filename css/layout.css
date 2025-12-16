@@ -2,8 +2,8 @@
 .app-window {
   width: 100%;
   max-width: 1800px;
-  aspect-ratio: 16 / 9;
-  max-height: 95vh;
+  height: 90vh;
+  max-height: 900px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
@@ -86,9 +86,10 @@ main {
   justify-content: space-between;
   align-items: center;
   background: var(--bg-tertiary);
-  border-top: 1px solid var(--border-color);
+  border-top: 2px solid var(--border-color);
   height: 50px;
   padding: 0 var(--spacing-md);
+  flex-shrink: 0;
 }
 
 .footer-left {
@@ -128,7 +129,8 @@ main {
   justify-content: center;
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, rgba(67, 217, 173, 0.15) 100%);
   padding: var(--spacing-xl);
-  overflow-y: auto;
+  overflow: hidden;
+  height: 100%;
 }
 
 .hero-content {
@@ -137,6 +139,7 @@ main {
   max-width: 1200px;
   width: 100%;
   align-items: center;
+  max-height: 100%;
 }
 
 .intro-section {

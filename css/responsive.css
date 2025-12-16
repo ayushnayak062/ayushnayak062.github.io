@@ -5,9 +5,11 @@
     padding: 1rem;
   }
 
+  /* Allow natural height on tablets and mobile */
   .app-window {
     aspect-ratio: auto;
     max-height: none;
+    height: auto;
     min-height: 100vh;
   }
 
