@@ -37,16 +37,29 @@
                         </button>
                         <div class="section-content active" id="personal">
                             <div class="folder-item">
-                                <span class="folder-icon">📄</span>
+                                <span class="folder-icon">👤</span>
                                 <button class="file-link active" data-file="bio">bio</button>
                             </div>
                             <div class="folder-item">
-                                <span class="folder-icon">📁</span>
+                                <span class="folder-icon">📘</span>
                                 <button class="file-link" data-file="interests">interests</button>
                             </div>
-                            <div class="folder-item">
-                                <span class="folder-icon">📁</span>
-                                <button class="file-link" data-file="education">education</button>
+                            <div class="folder-item nested-folder">
+                                <span class="folder-icon">📂</span>
+                                <button class="section-toggle nested" data-section="education">
+                                    <span class="toggle-icon">▶</span>
+                                    <span>education</span>
+                                </button>
+                            </div>
+                            <div class="section-content nested-content" id="education">
+                                <div class="folder-item nested-item">
+                                    <span class="folder-icon">🏫</span>
+                                    <button class="file-link" data-file="high-school">high-school</button>
+                                </div>
+                                <div class="folder-item nested-item">
+                                    <span class="folder-icon">🎓</span>
+                                    <button class="file-link" data-file="university">university</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,6 +74,10 @@
                                 <span class="contact-icon">✉️</span>
                                 <span>ayushnayak062@gmail.com</span>
                             </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <span>+3598246359</span>
+                            </div>
                         </div>
                     </div>
                 </aside>
@@ -68,7 +85,7 @@
                 <!-- Editor Panel -->
                 <div class="editor-panel">
                     <div class="tab-bar">
-                        <div class="tab active">
+                        <div class="tab active" data-file="bio">
                             <span id="currentTab">bio</span>
                             <button class="tab-close">×</button>
                         </div>
@@ -79,19 +96,19 @@
                         <div class="code-editor">
                             <pre id="codeContent"><code>/**
  * About me
- * I have 2+ years of experience building immersive
- * gameplay systems, VR training simulators, and 
- * multiplayer experiences. Strong focus on 
- * performance, system design, and player experience.
+ * I have 5 years of experience in web
+ * development lorem ipsum dolor sit amet,
+ * consectetur adipiscing elit, sed do eiusmod
+ * tempor incididunt ut labore et dolore
+ * magna aliqua. Ut enim ad minim veniam,
+ * quis nostrud exercitation ullamco laboris
+ * nisi ut aliquip ex ea commodo consequat.
+ * Duis aute irure dolor in reprehenderit in
  * 
- * Passionate about indie games, experimental mechanics,
- * and narrative-driven design. I love creating 
- * interactive experiences that push the boundaries
- * of what's possible in Unity and VR.
- * 
- * Currently working on XR training solutions and
- * exploring new ways to make games more engaging
- * and accessible.
+ * Duis aute irure dolor in reprehenderit in
+ * voluptate velit esse cillum dolore eu fugiat
+ * nulla pariatur. Excepteur sint occaecat
+ * officia deserunt mollit anim id est laborum.
  */</code></pre>
                         </div>
                     </div>
@@ -108,21 +125,20 @@
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23607B96'/%3E%3Ctext x='20' y='28' font-size='20' text-anchor='middle' fill='white' font-family='monospace'%3EAN%3C/text%3E%3C/svg%3E" alt="User" class="user-avatar">
                             <div class="snippet-info">
                                 <a href="https://github.com/ayushnayak062" target="_blank" class="username">@ayushnayak062</a>
-                                <p class="snippet-date">Created 8 months ago</p>
+                                <p class="snippet-date">Created 5 months ago</p>
                             </div>
                             <div class="snippet-stats">
-                                <span class="details-btn">💬 details</span>
-                                <span class="stars">⭐ 5 stars</span>
+                                <button class="details-btn">💬 details</button>
+                                <span class="stars">⭐ 3 stars</span>
                             </div>
                         </div>
                         <div class="snippet-code">
-<pre><code><span class="keyword">public class</span> <span class="class-name">PlayerController</span> : MonoBehaviour
-{
-    <span class="keyword">void</span> <span class="function">Update</span>()
-    {
-        <span class="keyword">float</span> move = Input.GetAxis(<span class="string">"Horizontal"</span>);
-        transform.Translate(move * speed * Time.deltaTime, <span class="number">0</span>, <span class="number">0</span>);
-    }
+<pre><code><span class="keyword">function</span> <span class="function">initializeModelChunk</span><span class="operator">&lt;</span><span class="type">T</span><span class="operator">&gt;</span>(chunk: ResolvedModelChunk): T {
+  <span class="keyword">const</span> value: T = <span class="function">parseModel</span>(chunk._response, chunk._value);
+  <span class="keyword">const</span> initializedChunk: InitializedChunk<span class="operator">&lt;</span><span class="type">T</span><span class="operator">&gt;</span> = (chunk: <span class="keyword">any</span>);
+  initializedChunk._status = INITIALIZED;
+  initializedChunk._value = value;
+  <span class="keyword">return</span> value;
 }</code></pre>
                         </div>
                     </div>
@@ -132,21 +148,26 @@
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23607B96'/%3E%3Ctext x='20' y='28' font-size='20' text-anchor='middle' fill='white' font-family='monospace'%3EAN%3C/text%3E%3C/svg%3E" alt="User" class="user-avatar">
                             <div class="snippet-info">
                                 <a href="https://github.com/ayushnayak062" target="_blank" class="username">@ayushnayak062</a>
-                                <p class="snippet-date">Created 1 year ago</p>
+                                <p class="snippet-date">Created 9 months ago</p>
                             </div>
                             <div class="snippet-stats">
-                                <span class="details-btn">💬 details</span>
-                                <span class="stars">⭐ 12 stars</span>
+                                <button class="details-btn">💬 details</button>
+                                <span class="stars">⭐ 0 stars</span>
                             </div>
                         </div>
                         <div class="snippet-code">
-<pre><code><span class="keyword">IEnumerator</span> <span class="function">SpawnEnemies</span>()
-{
-    <span class="keyword">while</span> (gameActive)
-    {
-        Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
-        <span class="keyword">yield return new</span> WaitForSeconds(spawnRate);
-    }
+<pre><code><span class="keyword">export function</span> <span class="function">parseModelTuple</span>(
+  response: Response,
+  value: {[key: string]: JSONValue} | $ReadOnlyArray<span class="operator">&lt;</span>JSONValue<span class="operator">&gt;</span>,
+): any {
+  <span class="keyword">const</span> tuple: [mixed, mixed, mixed, mixed] = (value: <span class="keyword">any</span>);
+
+  <span class="keyword">if</span> (tuple[<span class="number">0</span>] === REACT_ELEMENT_TYPE) {
+    <span class="comment">// TODO: Consider having React just directly accept these arrays as elements.</span>
+    <span class="comment">// Or even change the ReactElement type to be an array.</span>
+    <span class="keyword">return</span> createElement(tuple[<span class="number">1</span>], tuple[<span class="number">2</span>], tuple[<span class="number">3</span>]);
+  }
+  <span class="keyword">return</span> value;
 }</code></pre>
                         </div>
                     </div>

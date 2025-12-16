@@ -227,6 +227,17 @@ main {
   background: var(--bg-secondary);
 }
 
+/* Added nested folder toggle styles */
+.section-toggle.nested {
+  width: auto;
+  padding: 0;
+  background: none;
+}
+
+.section-toggle.nested:hover {
+  background: none;
+}
+
 .toggle-icon {
   font-size: 0.75rem;
 }
@@ -238,6 +249,22 @@ main {
 
 .section-content.active {
   display: block;
+}
+
+/* Added nested folder styles */
+.nested-folder {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs);
+}
+
+.nested-content {
+  padding: 0 0 0 var(--spacing-lg);
+}
+
+.nested-item {
+  padding-left: var(--spacing-md);
 }
 
 .folder-item {
@@ -391,6 +418,20 @@ main {
   display: flex;
   gap: var(--spacing-sm);
   font-size: 0.75rem;
+  align-items: center;
+}
+
+/* Made details button interactive */
+.details-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.details-btn:hover {
+  color: var(--text-white);
 }
 
 .snippet-code {
@@ -403,6 +444,7 @@ main {
 .snippet-code pre {
   margin: 0;
   font-size: 0.875rem;
+  line-height: 1.4;
 }
 
 /* Projects Page */
