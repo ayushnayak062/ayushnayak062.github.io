@@ -1,102 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Ayush Nayak</title>
-    <link rel="stylesheet" href="../css/variables.css" />
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/terminal.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/terminal.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
     <!-- Navigation -->
     <div class="viewport">
-      <div class="app-window">
-        <nav class="main-nav">
-          <div class="nav-left">
-            <span class="nav-name">ayush-nayak</span>
-            <a href="../index.html" class="nav-link">_hello</a>
-            <a href="about.html" class="nav-link active">_about-me</a>
-            <a href="projects.html" class="nav-link">_projects</a>
-          </div>
-          <div class="nav-right">
-            <a href="contact.html" class="nav-link">_contact-me</a>
-          </div>
-        </nav>
+        <div class="app-window">
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <span class="nav-name">ayush-nayak</span>
+                    <a href="../index.html" class="nav-link">_hello</a>
+                    <a href="about.html" class="nav-link active">_about-me</a>
+                    <a href="projects.html" class="nav-link">_projects</a>
+                </div>
+                <div class="nav-right">
+                    <a href="contact.html" class="nav-link">_contact-me</a>
+                </div>
+            </nav>
 
-        <!-- Main Content -->
-        <main class="about-container">
-          <!-- Sidebar -->
-          <aside class="sidebar">
-            <!-- Restructured personal-info section with flat hierarchy -->
-            <div class="sidebar-section">
-              <button class="section-toggle active" data-section="personal">
-                <span class="toggle-icon">▼</span>
-                <span>personal-info</span>
-              </button>
-              <div class="section-content active" id="personal">
-                <div class="folder-item">
-                  <span class="folder-icon">📝</span>
-                  <button class="file-link active" data-file="bio">bio</button>
-                </div>
-                <div class="folder-item">
-                  <span class="folder-icon">💼</span>
-                  <button class="file-link" data-file="experience">
-                    experience
-                  </button>
-                </div>
-                <div class="folder-item">
-                  <span class="folder-icon">🎓</span>
-                  <button class="file-link" data-file="education">
-                    education
-                  </button>
-                </div>
-                <div class="folder-item">
-                  <span class="folder-icon">⚡</span>
-                  <button class="file-link" data-file="interests">
-                    interests
-                  </button>
-                </div>
-              </div>
-            </div>
+            <!-- Main Content -->
+            <main class="about-container">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Restructured personal-info section with flat hierarchy -->
+                    <div class="sidebar-section">
+                        <button class="section-toggle active" data-section="personal">
+                            <span class="toggle-icon">▼</span>
+                            <span>personal-info</span>
+                        </button>
+                        <!-- Added border-divider directly under section-toggle button -->
+                        <div class="section-divider"></div>
+                        <div class="section-content active" id="personal">
+                            <div class="folder-item">
+                                <span class="folder-icon">📝</span>
+                                <button class="file-link active" data-file="bio">bio</button>
+                            </div>
+                            <div class="folder-item">
+                                <span class="folder-icon">💼</span>
+                                <button class="file-link" data-file="experience">experience</button>
+                            </div>
+                            <div class="folder-item">
+                                <span class="folder-icon">🎓</span>
+                                <button class="file-link" data-file="education">education</button>
+                            </div>
+                            <div class="folder-item">
+                                <span class="folder-icon">⚡</span>
+                                <button class="file-link" data-file="interests">interests</button>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Contacts section now open by default with clickable links -->
-            <div class="sidebar-section">
-              <button class="section-toggle active" data-section="contacts">
-                <span class="toggle-icon">▼</span>
-                <span>contacts</span>
-              </button>
-              <div class="section-content active" id="contacts">
-                <div class="contact-item">
-                  <span class="contact-icon">✉️</span>
-                  <a href="mailto:ayushnayak062@gmail.com" class="contact-link"
-                    >ayushnayak062@gmail.com</a
-                  >
-                </div>
-                <div class="contact-item">
-                  <span class="contact-icon">📞</span>
-                  <a href="tel:+3598246359" class="contact-link">+3598246359</a>
-                </div>
-              </div>
-            </div>
-          </aside>
+                    <!-- Contacts section now open by default with clickable links -->
+                    <div class="sidebar-section">
+                        <button class="section-toggle active" data-section="contacts">
+                            <span class="toggle-icon">▼</span>
+                            <span>contacts</span>
+                        </button>
+                        <!-- Added border-divider directly under section-toggle button -->
+                        <div class="section-divider"></div>
+                        <div class="section-content active" id="contacts">
+                            <div class="contact-item">
+                                <span class="contact-icon">✉️</span>
+                                <a href="mailto:ayushnayak062@gmail.com" class="contact-link">ayushnayak062@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <a href="tel:+3598246359" class="contact-link">+3598246359</a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
 
-          <!-- Editor Panel -->
-          <div class="editor-panel">
-            <div class="tab-bar">
-              <div class="tab active" data-file="bio">
-                <span id="currentTab">bio</span>
-                <button class="tab-close">×</button>
-              </div>
-            </div>
-
-            <!-- Bio content now displays by default with real profile information -->
-            <div class="editor-content">
-              <div class="line-numbers" id="lineNumbers"></div>
-              <div class="code-editor">
-                <pre id="codeContent"><code>/**
+                <!-- Editor Panel -->
+                <div class="editor-panel">
+                    <div class="tab-bar">
+                        <div class="tab active" data-file="bio">
+                            <span id="currentTab">bio</span>
+                            <button class="tab-close">×</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Bio content now displays by default with real profile information -->
+                    <div class="editor-content">
+                        <div class="line-numbers" id="lineNumbers"></div>
+                        <div class="code-editor">
+                            <pre id="codeContent"><code>/**
  * About me
  * I have 2+ years of experience building immersive
  * gameplay systems, VR training simulators, and 
@@ -112,71 +108,53 @@
  * exploring new ways to make games more engaging
  * and accessible.
  */</code></pre>
-              </div>
-            </div>
-          </div>
-
-          <!-- Code Snippets Panel -->
-          <div class="snippets-panel">
-            <div class="snippets-header">
-              <p class="comment">// Code snippet showcase:</p>
-            </div>
-
-            <div class="snippet-card">
-              <div class="snippet-header">
-                <img
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23607B96'/%3E%3Ctext x='20' y='28' font-size='20' text-anchor='middle' fill='white' font-family='monospace'%3EAN%3C/text%3E%3C/svg%3E"
-                  alt="User"
-                  class="user-avatar"
-                />
-                <div class="snippet-info">
-                  <a
-                    href="https://github.com/ayushnayak062"
-                    target="_blank"
-                    class="username"
-                    >@ayushnayak062</a
-                  >
-                  <p class="snippet-date">Created 5 months ago</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="snippet-stats">
-                  <button class="details-btn">💬 details</button>
-                  <span class="stars">⭐ 3 stars</span>
-                </div>
-              </div>
-              <div class="snippet-code">
-                <pre><code><span class="keyword">function</span> <span class="function">initializeModelChunk</span><span class="operator">&lt;</span><span class="type">T</span><span class="operator">&gt;</span>(chunk: ResolvedModelChunk): T {
+
+                <!-- Code Snippets Panel -->
+                <div class="snippets-panel">
+                    <div class="snippets-header">
+                        <p class="comment">// Code snippet showcase:</p>
+                    </div>
+                    
+                    <div class="snippet-card">
+                        <div class="snippet-header">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23607B96'/%3E%3Ctext x='20' y='28' font-size='20' text-anchor='middle' fill='white' font-family='monospace'%3EAN%3C/text%3E%3C/svg%3E" alt="User" class="user-avatar">
+                            <div class="snippet-info">
+                                <a href="https://github.com/ayushnayak062" target="_blank" class="username">@ayushnayak062</a>
+                                <p class="snippet-date">Created 5 months ago</p>
+                            </div>
+                            <div class="snippet-stats">
+                                <button class="details-btn">💬 details</button>
+                                <span class="stars">⭐ 3 stars</span>
+                            </div>
+                        </div>
+                        <div class="snippet-code">
+<pre><code><span class="keyword">function</span> <span class="function">initializeModelChunk</span><span class="operator">&lt;</span><span class="type">T</span><span class="operator">&gt;</span>(chunk: ResolvedModelChunk): T {
   <span class="keyword">const</span> value: T = <span class="function">parseModel</span>(chunk._response, chunk._value);
   <span class="keyword">const</span> initializedChunk: InitializedChunk<span class="operator">&lt;</span><span class="type">T</span><span class="operator">&gt;</span> = (chunk: <span class="keyword">any</span>);
   initializedChunk._status = INITIALIZED;
   initializedChunk._value = value;
   <span class="keyword">return</span> value;
 }</code></pre>
-              </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class="snippet-card">
-              <div class="snippet-header">
-                <img
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23607B96'/%3E%3Ctext x='20' y='28' font-size='20' text-anchor='middle' fill='white' font-family='monospace'%3EAN%3C/text%3E%3C/svg%3E"
-                  alt="User"
-                  class="user-avatar"
-                />
-                <div class="snippet-info">
-                  <a
-                    href="https://github.com/ayushnayak062"
-                    target="_blank"
-                    class="username"
-                    >@ayushnayak062</a
-                  >
-                  <p class="snippet-date">Created 9 months ago</p>
-                </div>
-                <div class="snippet-stats">
-                  <button class="details-btn">💬 details</button>
-                  <span class="stars">⭐ 0 stars</span>
-                </div>
-              </div>
-              <div class="snippet-code">
-                <pre><code><span class="keyword">export function</span> <span class="function">parseModelTuple</span>(
+                    <div class="snippet-card">
+                        <div class="snippet-header">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23607B96'/%3E%3Ctext x='20' y='28' font-size='20' text-anchor='middle' fill='white' font-family='monospace'%3EAN%3C/text%3E%3C/svg%3E" alt="User" class="user-avatar">
+                            <div class="snippet-info">
+                                <a href="https://github.com/ayushnayak062" target="_blank" class="username">@ayushnayak062</a>
+                                <p class="snippet-date">Created 9 months ago</p>
+                            </div>
+                            <div class="snippet-stats">
+                                <button class="details-btn">💬 details</button>
+                                <span class="stars">⭐ 0 stars</span>
+                            </div>
+                        </div>
+                        <div class="snippet-code">
+<pre><code><span class="keyword">export function</span> <span class="function">parseModelTuple</span>(
   response: Response,
   value: {[key: string]: JSONValue} | $ReadOnlyArray<span class="operator">&lt;</span>JSONValue<span class="operator">&gt;</span>,
 ): any {
@@ -189,63 +167,36 @@
   }
   <span class="keyword">return</span> value;
 }</code></pre>
-              </div>
-            </div>
-          </div>
-        </main>
+                        </div>
+                    </div>
+                </div>
+            </main>
 
-        <!-- Footer -->
-        <footer class="main-footer">
-          <div class="footer-left">
-            <span class="footer-text">find me in:</span>
-            <a
-              href="https://linkedin.com/in/ayushnayak062"
-              target="_blank"
-              class="footer-icon"
-              aria-label="LinkedIn"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                ></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
-          </div>
-          <div class="footer-right">
-            <a
-              href="https://github.com/ayushnayak062"
-              target="_blank"
-              class="footer-github"
-            >
-              <span>@ayushnayak062</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </footer>
-      </div>
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="footer-left">
+                    <span class="footer-text">find me in:</span>
+                    <a href="https://linkedin.com/in/ayushnayak062" target="_blank" class="footer-icon" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/ayushnayak062" target="_blank" class="footer-github">
+                        <span>@ayushnayak062</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                </div>
+            </footer>
+        </div>
     </div>
 
     <script src="../js/navigation.js"></script>
     <script src="../js/typing.js"></script>
-  </body>
+</body>
 </html>

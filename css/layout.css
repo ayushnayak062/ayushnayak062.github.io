@@ -227,6 +227,13 @@ main {
   background: var(--bg-secondary);
 }
 
+/* Added section-divider to create fixed border under dropdown buttons */
+.section-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 0;
+}
+
 /* Added nested folder toggle styles */
 .section-toggle.nested {
   width: auto;
@@ -238,8 +245,24 @@ main {
   background: none;
 }
 
+/* Fixed toggle-icon size to remain constant during animation */
 .toggle-icon {
   font-size: 0.75rem;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate icon on toggle without changing size */
+.section-toggle.active .toggle-icon {
+  transform: rotate(0deg);
+}
+
+.section-toggle:not(.active) .toggle-icon {
+  transform: rotate(-90deg);
 }
 
 .section-content {
@@ -304,10 +327,13 @@ main {
   flex-direction: column;
 }
 
+/* Reduced tab-bar height to match personal-info button height */
 .tab-bar {
   display: flex;
   border-bottom: 1px solid var(--border-color);
   background: var(--bg-tertiary);
+  height: 40px;
+  flex-shrink: 0;
 }
 
 .tab {
@@ -317,6 +343,7 @@ main {
   padding: var(--spacing-sm) var(--spacing-md);
   border-right: 1px solid var(--border-color);
   color: var(--text-primary);
+  height: 100%;
 }
 
 .tab.active {
@@ -367,11 +394,13 @@ main {
 }
 
 /* Snippets Panel */
+/* Increased width from 450px to 550px for better balance */
 .snippets-panel {
-  width: 450px;
+  width: 550px;
   background: var(--bg-secondary);
   padding: var(--spacing-md);
   overflow-y: auto;
+  border-left: 1px solid var(--border-color);
 }
 
 .snippets-header {
