@@ -85,7 +85,7 @@ main {
 .main-footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   background: var(--bg-tertiary);
   border-top: 1px solid var(--border-color);
   height: 48px;
@@ -95,7 +95,7 @@ main {
 
 .footer-left {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   height: 100%;
   padding-left: var(--spacing-md);
   border-right: 1px solid var(--border-color);
@@ -105,8 +105,11 @@ main {
   color: var(--text-primary);
   margin-right: var(--spacing-sm);
   padding-right: var(--spacing-sm);
+  display: flex;
+  align-items: center;
 }
 
+/* Added full-height border on left side of icon to create continuous vertical line */
 .footer-icon {
   display: flex;
   align-items: center;
@@ -123,12 +126,8 @@ main {
   background: var(--bg-secondary);
 }
 
-.footer-right {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
+/* Removed footer-right wrapper to prevent extra divider after GitHub username */
+/* Added border-left directly to footer-github, no border-right */
 .footer-github {
   display: flex;
   align-items: center;
@@ -138,6 +137,7 @@ main {
   border-left: 1px solid var(--border-color);
   color: var(--text-primary);
   transition: var(--transition);
+  margin-left: auto;
 }
 
 .footer-github:hover {
