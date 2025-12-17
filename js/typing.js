@@ -39,37 +39,43 @@ document.addEventListener("DOMContentLoaded", () => {
  * - Integrated haptic suit APIs for immersive feedback
  * - Created multiplayer networking systems
  */`,
+    skills: `/**
+ * Hard Skills
+ */
+
+const skills = {
+  Engines: ["Unity 3D", "Unreal Engine"],
+  Languages: ["C#", "C++", "Java", "Python", "SQL"],
+  Platforms: ["PC", "Android", "WebGL", "VR (Quest, Vive)"],
+  Networking: ["Photon"],
+  Monetization: ["Unity Ads", "IAP"],
+  Tools: ["Git", "Addressables", "Shader Graph"]
+};`,
     education: `/**
  * Education
  * 
- * Bachelor of Technology in Computer Science
- * XYZ University
- * 2018 – 2022
+ * Bachelor of Science — Computer Science & Game Development
+ * Backstage Pass Institute of Gaming and Technology
+ * Hyderabad | 2019 – 2023
  * 
- * Relevant Coursework:
- * - Game Development & Design
- * - Computer Graphics & Rendering
- * - Artificial Intelligence
- * - Data Structures & Algorithms
- * - Virtual Reality Systems
- * - Multiplayer Game Architecture
+ * Key Focus:
+ * - Unity game development (C#)
+ * - Core computer science fundamentals
+ * - Gameplay mechanics and implementation
+ * - Debugging, testing, and iteration
  * 
- * Senior Project: Built a procedural dungeon crawler
- * with roguelike mechanics in Unity
+ * Senior Project:
+ * Fruit Attack — Casual Unity arcade game with multiple modes
  */`,
     interests: `/**
  * Interests
- * - Indie game development
- * - VR and XR experiences
- * - Game mechanics design
- * - AI behavior systems
- * - Multiplayer networking
- * - Performance optimization
- * - Unity shader development
- * - Narrative-driven games
- * - Experimental gameplay
- * - Procedural generation
- * - Game jams & rapid prototyping
+ * - Making small games to test big ideas
+ * - Fixing gameplay systems that break in new and exciting ways
+ * - VR/XR experiments that may or may not work
+ * - Football — FC Barcelona fan for life (therapy included)
+ * - Rap music louder than my build errors
+ * - Movies and cinematography (yes, I pause scenes to study framing)
+ * - Photography, mostly blaming lighting for bad shots
  */`,
   };
 
