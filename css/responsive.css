@@ -47,6 +47,19 @@
    (Below 768px)
    ----------------------------------------------------- */
 @media (max-width: 767px) {
+  /* --------------------------------
+     FIX CODE CONTENT SIDE SCROLL
+     -------------------------------- */
+  .code-editor pre,
+  .code-editor code {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: hidden;
+  }
+
+  /* --------------------------------
+     VIEWPORT / APP WINDOW
+     -------------------------------- */
   .viewport {
     padding: 0;
   }
@@ -57,19 +70,12 @@
     border-left: none;
     border-right: none;
   }
-  .main-nav .nav-link {
-    display: none;
-  }
-
-  .mobile-menu-btn {
-    display: flex;
-  }
 
   /* ================================
      NAVIGATION (MOBILE MODE)
      ================================ */
 
-  /* Hide ALL nav links (including contact) */
+  /* Hide ALL nav links */
   .main-nav .nav-link {
     display: none !important;
   }
@@ -102,7 +108,7 @@
   }
 
   /* ================================
-     PREVENT CLIPPING
+     PREVENT CLIPPING / SCROLL LOCKS
      ================================ */
 
   main {
@@ -119,7 +125,7 @@
 
   .code-editor,
   .code-display {
-    overflow-x: auto;
+    overflow-x: hidden;
   }
 
   /* ================================
@@ -144,6 +150,10 @@
     font-size: 1rem;
   }
 
+  /* ================================
+     ABOUT PAGE
+     ================================ */
+
   .editor-content {
     flex-direction: column;
   }
@@ -152,11 +162,18 @@
     display: none;
   }
 
+  /* ================================
+     PROJECTS
+     ================================ */
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Footer stays unchanged (as you wanted) */
+  /* ================================
+     FOOTER
+     ================================ */
+
   .footer-icon,
   .footer-github {
     padding: 0 1rem;
