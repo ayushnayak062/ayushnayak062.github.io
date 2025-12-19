@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const codeContent = document.getElementById("codeContent");
   const lineNumbers = document.getElementById("lineNumbers");
   const currentTab = document.getElementById("currentTab");
+  const sectionToggles = document.querySelectorAll(".section-toggle");
+
+  function isMobileView() {
+    return window.innerWidth <= 767;
+  }
 
   const contentMap = {
     bio: `/**
@@ -79,6 +84,18 @@ const skills = {
  */`,
   };
 
+  // Sidebar section toggle logic
+  sectionToggles.forEach((toggle) => {
+    const sectionId = toggle.dataset.section;
+    const content = document.getElementById(sectionId);
+    if (!content) return;
+
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      content.classList.toggle("active");
+    });
+  });
+
   function updateLineNumbers(content) {
     if (!lineNumbers) return;
 
@@ -119,4 +136,23 @@ const skills = {
       }
     });
   });
+  // Initial sidebar state based on viewport
+  function applySidebarDefaults() {
+    sectionToggles.forEach((toggle) => {
+      const sectionId = toggle.dataset.section;
+      const content = document.getElementById(sectionId);
+      if (!content) return;
+
+      if (isMobileView()) {
+        toggle.classList.remove("active");
+        content.classList.remove("active");
+      }
+    });
+  }
+
+  // Apply on load
+  applySidebarDefaults();
+
+  // Re-apply on resize (mobile ↔ desktop)
+  window.addEventListener("resize", applySidebarDefaults);
 });

@@ -57,6 +57,13 @@
     border-left: none;
     border-right: none;
   }
+  .main-nav .nav-link {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
 
   /* ================================
      NAVIGATION (MOBILE MODE)
