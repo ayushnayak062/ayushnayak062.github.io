@@ -436,6 +436,18 @@ main {
   color: var(--text-comment);
   line-height: 1.5rem;
 }
+/* --------------------------------
+   Comment line rendering (responsive-safe)
+   -------------------------------- */
+.comment-line {
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  /* Hanging indent so wrapped lines align after '*' */
+  padding-left: 2ch;
+  text-indent: -3ch;
+}
 
 /* Gameplay Systems Panel replaces code snippets */
 .snippets-panel {

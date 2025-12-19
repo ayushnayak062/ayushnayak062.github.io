@@ -1,4 +1,4 @@
-// About page file switching and line number generation
+// About page file switching, sidebar toggles, and line number generation
 document.addEventListener("DOMContentLoaded", () => {
   const fileLinks = document.querySelectorAll(".file-link");
   const codeContent = document.getElementById("codeContent");
@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return window.innerWidth <= 767;
   }
 
+  /* --------------------------------
+     Content map
+     -------------------------------- */
   const contentMap = {
     bio: `/**
  * About me
@@ -45,17 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
  * - Created multiplayer networking systems
  */`,
     skills: `/**
- * Hard Skills
- */
-
-const skills = {
-  Engines: ["Unity 3D", "Unreal Engine"],
-  Languages: ["C#", "C++", "Java", "Python", "SQL"],
-  Platforms: ["PC", "Android", "WebGL", "VR (Quest, Vive)"],
-  Networking: ["Photon"],
-  Monetization: ["Unity Ads", "IAP"],
-  Tools: ["Git", "Addressables", "Shader Graph"]
-};`,
+ * const skills = {
+ *   Engines: ["Unity 3D", "Unreal Engine"],
+ *   Languages: ["C#", "C++", "Java", "Python", "SQL"],
+ *   Platforms: ["PC", "Android", "WebGL", "VR (Quest, Vive)"],
+ *   Networking: ["Photon"],
+ *   Monetization: ["Unity Ads", "IAP"],
+ *   Tools: ["Git", "Addressables", "Shader Graph"]
+ * };
+ */`,
     education: `/**
  * Education
  * 
@@ -84,7 +85,19 @@ const skills = {
  */`,
   };
 
-  // Sidebar section toggle logic
+  /* --------------------------------
+     Render comment block as real lines
+     -------------------------------- */
+  function renderCommentBlock(text) {
+    return text
+      .split("\n")
+      .map((line) => `<span class="comment-line">${line}</span>`)
+      .join("");
+  }
+
+  /* --------------------------------
+     Sidebar section toggle logic
+     -------------------------------- */
   sectionToggles.forEach((toggle) => {
     const sectionId = toggle.dataset.section;
     const content = document.getElementById(sectionId);
@@ -96,11 +109,15 @@ const skills = {
     });
   });
 
+  /* --------------------------------
+     Line numbers
+     -------------------------------- */
   function updateLineNumbers(content) {
     if (!lineNumbers) return;
 
     const lines = content.split("\n").length;
     lineNumbers.innerHTML = "";
+
     for (let i = 1; i <= lines; i++) {
       const span = document.createElement("span");
       span.textContent = i;
@@ -108,35 +125,40 @@ const skills = {
     }
   }
 
+  /* --------------------------------
+     Initial load (bio)
+     -------------------------------- */
   if (codeContent) {
     const bioContent = contentMap.bio;
-    codeContent.innerHTML = `<code>${bioContent}</code>`;
+    codeContent.innerHTML = renderCommentBlock(bioContent);
     updateLineNumbers(bioContent);
   }
 
-  // File link click handlers
+  /* --------------------------------
+     File switching
+     -------------------------------- */
   fileLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const file = link.dataset.file;
 
-      // Update active state
       fileLinks.forEach((l) => l.classList.remove("active"));
       link.classList.add("active");
 
-      // Update content
       if (codeContent && contentMap[file]) {
-        codeContent.innerHTML = `<code>${contentMap[file]}</code>`;
+        codeContent.innerHTML = renderCommentBlock(contentMap[file]);
         updateLineNumbers(contentMap[file]);
       }
 
-      // Update tab name
       if (currentTab) {
         currentTab.textContent = file;
       }
     });
   });
-  // Initial sidebar state based on viewport
+  console.log("typing.js loaded");
+  /* --------------------------------
+     Sidebar defaults (mobile vs desktop)
+     -------------------------------- */
   function applySidebarDefaults() {
     sectionToggles.forEach((toggle) => {
       const sectionId = toggle.dataset.section;
@@ -150,9 +172,6 @@ const skills = {
     });
   }
 
-  // Apply on load
   applySidebarDefaults();
-
-  // Re-apply on resize (mobile ↔ desktop)
   window.addEventListener("resize", applySidebarDefaults);
 });

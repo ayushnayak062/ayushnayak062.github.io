@@ -45,13 +45,19 @@
                     >ayushnayak062@gmail.com</a
                   >
                 </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📞</span>
+                  <a href="tel:+917751925590" class="contact-link"
+                    >+91 77519 25590</a
+                  >
+                </div>
               </div>
             </div>
 
             <div class="sidebar-section">
               <button class="section-toggle active">
                 <span class="toggle-icon">▼</span>
-                <span>find-me-also-in</span>
+                <span>social-links</span>
               </button>
               <div class="section-content active">
                 <a
@@ -70,6 +76,17 @@
                   <span class="external-icon">🔗</span>
                   <span>LinkedIn</span>
                 </a>
+                <div class="contact-item">
+                  <span class="contact-icon">📄</span>
+                  <a
+                    href="https://drive.google.com/file/d/1drElyJ7p_OZi6JtnL4a69Mo4jrH-UoHt/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                  >
+                    Resume
+                  </a>
+                </div>
               </div>
             </div>
           </aside>
@@ -195,6 +212,18 @@
 
     <script src="../js/navigation.js"></script>
     <script>
+      // Sidebar section toggle (Contact page)
+      document.querySelectorAll(".section-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          toggle.classList.toggle("active");
+
+          const content = toggle.nextElementSibling;
+          if (content && content.classList.contains("section-content")) {
+            content.classList.toggle("active");
+          }
+        });
+      });
+
       // Live form preview in code panel
       const form = document.getElementById("contactForm");
       const nameInput = document.getElementById("name");
