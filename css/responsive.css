@@ -1,24 +1,21 @@
-/* Updated responsive behavior for global app window system */
-@media (max-width: 1024px) {
-  /* Allow viewport to adapt on smaller screens */
-  .viewport {
-    padding: 1rem;
-  }
+/* =====================================================
+   RESPONSIVE SYSTEM
+   Desktop-first — desktop remains unchanged
+   ===================================================== */
 
-  /* Allow natural height on tablets and mobile */
+/* -----------------------------------------------------
+   Large tablets & small laptops
+   (Below 1280px)
+   ----------------------------------------------------- */
+@media (max-width: 1279px) {
   .app-window {
-    aspect-ratio: auto;
-    max-height: none;
+    max-width: 100%;
     height: auto;
-    min-height: 100vh;
+    max-height: none;
   }
 
-  .hero-content {
+  main {
     flex-direction: column;
-  }
-
-  .system-section {
-    width: 100%;
   }
 
   .about-container,
@@ -41,86 +38,152 @@
   }
 
   .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-
-  /* Reset nav-name width on smaller screens */
-  .nav-name {
-    width: auto;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
 }
 
-@media (max-width: 768px) {
-  /* Mobile uses full width */
+/* -----------------------------------------------------
+   Tablets & mobile
+   (Below 768px)
+   ----------------------------------------------------- */
+@media (max-width: 767px) {
   .viewport {
     padding: 0;
   }
 
   .app-window {
+    min-height: 100vh;
     border-radius: 0;
     border-left: none;
     border-right: none;
   }
 
-  .nav-link {
-    font-size: 0.875rem;
-    padding: 0 1rem;
+  /* ================================
+     NAVIGATION (MOBILE MODE)
+     ================================ */
+
+  /* Hide ALL nav links (including contact) */
+  .main-nav .nav-link {
+    display: none !important;
   }
 
-  .hero-title {
-    font-size: 2rem;
+  /* Show hamburger */
+  .mobile-menu-btn {
+    display: flex !important;
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    padding: 0 1.25rem;
+    color: var(--text-primary);
+    border-left: 1px solid var(--border-color);
+    background: none;
+    align-items: center;
   }
 
-  .hero-subtitle {
-    font-size: 1rem;
+  .mobile-menu-btn:hover {
+    background: var(--bg-secondary);
+    color: var(--text-white);
+  }
+
+  .main-nav {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-wrap: nowrap;
+  }
+
+  /* ================================
+     PREVENT CLIPPING
+     ================================ */
+
+  main {
+    overflow-y: auto;
+  }
+
+  .editor-panel,
+  .snippets-panel,
+  .projects-content,
+  .form-panel {
+    height: auto;
+    min-height: auto;
+  }
+
+  .code-editor,
+  .code-display {
+    overflow-x: auto;
+  }
+
+  /* ================================
+     HERO
+     ================================ */
+
+  .hero-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
   }
 
   .hero-container {
     padding: var(--spacing-md);
   }
 
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .editor-content {
+    flex-direction: column;
+  }
+
+  .line-numbers {
+    display: none;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
 
-  .footer-left,
-  .footer-right {
-    font-size: 0.875rem;
-  }
-
-  .footer-text {
-    display: none;
-  }
-
-  .system-flow {
-    gap: var(--spacing-sm);
-  }
-
-  .system-node {
-    min-width: 60px;
-    padding: var(--spacing-sm);
+  /* Footer stays unchanged (as you wanted) */
+  .footer-icon,
+  .footer-github {
+    padding: 0 1rem;
   }
 }
 
+/* -----------------------------------------------------
+   Small phones
+   (Below 480px)
+   ----------------------------------------------------- */
 @media (max-width: 480px) {
-  .main-nav {
-    height: auto;
-  }
-
-  .nav-left {
-    flex-wrap: wrap;
-  }
-
-  .nav-link {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: 0.75rem;
-  }
-
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
-  .system-container {
-    padding: var(--spacing-md);
+  .hero-subtitle {
+    font-size: 0.9rem;
   }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+
+  .code-editor pre,
+  .code-display pre {
+    font-size: 0.8rem;
+  }
+}
+
+/* -----------------------------------------------------
+   GLOBAL SAFETY
+   ----------------------------------------------------- */
+
+/* Hide hamburger on desktop */
+.mobile-menu-btn {
+  display: none;
 }

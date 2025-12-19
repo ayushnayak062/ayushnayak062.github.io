@@ -1,33 +1,55 @@
-// Navigation active state management
 document.addEventListener("DOMContentLoaded", () => {
-  const currentPage = window.location.pathname
-  const navLinks = document.querySelectorAll(".nav-link")
+  const menuBtn = document.querySelector(".mobile-menu-btn");
+  const appWindow = document.querySelector(".app-window");
+  const main = document.querySelector("main");
 
-  navLinks.forEach((link) => {
-    const href = link.getAttribute("href")
+  if (!menuBtn || !appWindow || !main) return;
 
-    // Remove active class from all
-    link.classList.remove("active")
+  /* --------------------------------
+     Create mobile navigation panel
+     -------------------------------- */
+  const mobilePanel = document.createElement("div");
+  mobilePanel.className = "mobile-nav-panel";
 
-    // Add active class to current page
-    if (currentPage.includes(href) || (currentPage === "/" && href === "index.html")) {
-      link.classList.add("active")
+  const title = document.createElement("div");
+  title.className = "mobile-nav-title";
+  title.textContent = "# navigate:";
+  mobilePanel.appendChild(title);
+
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    const clone = link.cloneNode(true);
+    clone.classList.remove("active");
+    mobilePanel.appendChild(clone);
+  });
+
+  appWindow.insertBefore(mobilePanel, main.nextSibling);
+
+  let isOpen = false;
+
+  function openMenu() {
+    isOpen = true;
+    main.classList.add("hidden");
+    mobilePanel.classList.add("open");
+    menuBtn.textContent = "✕";
+  }
+
+  function closeMenu() {
+    isOpen = false;
+    mobilePanel.classList.remove("open");
+    main.classList.remove("hidden");
+    menuBtn.textContent = "☰";
+  }
+
+  menuBtn.addEventListener("click", () => {
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  /* --------------------------------
+     Resize safety (hard reset)
+     -------------------------------- */
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 767 && isOpen) {
+      closeMenu();
     }
-  })
-
-  // Sidebar toggle functionality
-  const toggleButtons = document.querySelectorAll(".section-toggle")
-  toggleButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const sectionId = button.dataset.section
-      const content = document.getElementById(sectionId)
-      const icon = button.querySelector(".toggle-icon")
-
-      if (content) {
-        content.classList.toggle("active")
-        button.classList.toggle("active")
-        icon.textContent = content.classList.contains("active") ? "▼" : "▶"
-      }
-    })
-  })
-})
+  });
+});

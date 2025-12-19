@@ -49,6 +49,11 @@
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
 
+  :root {
+    --nav-height: 56px;
+    --footer-height: 56px;
+  }
+
   /* Transitions */
   --transition: all 0.3s ease;
 }
