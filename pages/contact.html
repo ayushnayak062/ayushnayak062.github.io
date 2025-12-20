@@ -100,7 +100,12 @@
               </div>
             </div>
 
-            <form class="contact-form" id="contactForm">
+            <form
+              class="contact-form"
+              id="contactForm"
+              action="https://formspree.io/f/mbdrodjr"
+              method="POST"
+            >
               <div class="form-group">
                 <label for="name">_name:</label>
                 <input type="text" id="name" name="name" required />
@@ -295,13 +300,28 @@
       updatePreview();
 
       // Form submission
-      form.addEventListener("submit", (e) => {
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        alert(
-          "Thank you for your message! This is a demo form. In production, connect to a backend service."
-        );
-        form.reset();
-        updatePreview();
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            alert("Message sent successfully.");
+            form.reset();
+            updatePreview();
+          } else {
+            alert("Failed to send message. Please try again.");
+          }
+        } catch (error) {
+          alert("Network error. Please try again later.");
+        }
       });
     </script>
   </body>
