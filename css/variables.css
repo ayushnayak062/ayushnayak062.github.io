@@ -82,4 +82,5 @@
      ----------------------------------------------------- */
 
   --transition: all 0.3s ease; /* Default transition for interactive elements */
+  --padding-new: 0.83rem;
 }

@@ -259,7 +259,7 @@ main {
 
 .section-toggle {
   width: 100%;
-  padding: var(--spacing-sm);
+  padding: var(--padding-new);
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
