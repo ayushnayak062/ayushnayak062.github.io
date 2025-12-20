@@ -4,16 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Ayush Nayak</title>
+
+    <!-- Core Stylesheets - Design System Foundation -->
     <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/terminal.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
   </head>
+
   <body>
-    <!-- Navigation -->
+    <!-- =====================================================
+         VIEWPORT CONTAINER - App Window Illusion
+         Centers the terminal-style app window on any screen size
+         ===================================================== -->
     <div class="viewport">
+      <!-- =====================================================
+           APP WINDOW - Terminal Interface
+           Fixed-size bordered window mimicking desktop application
+           ===================================================== -->
       <div class="app-window">
+        <!-- =====================================================
+             NAVIGATION HEADER - Fixed Top Bar
+             Always visible terminal-style navigation
+             ===================================================== -->
         <nav class="main-nav">
           <div class="nav-left">
             <span class="nav-name">ayush-nayak</span>
@@ -27,11 +41,20 @@
           </div>
         </nav>
 
-        <!-- Main Content -->
+        <!-- =====================================================
+             MAIN CONTENT - Terminal File Explorer
+             Sidebar with file tree and editor panel
+             ===================================================== -->
         <main class="about-container">
-          <!-- Sidebar -->
+          <!-- =====================================================
+               SIDEBAR - File Explorer
+               Collapsible sections for personal information categories
+               ===================================================== -->
           <aside class="sidebar">
-            <!-- Restructured personal-info with Bio, Experience, Skills, Education, Interests -->
+            <!-- =====================================================
+                 PERSONAL INFO SECTION - Expandable Folder
+                 Contains bio, experience, skills, education, interests
+                 ===================================================== -->
             <div class="sidebar-section">
               <button class="section-toggle active" data-section="personal">
                 <span class="toggle-icon">▼</span>
@@ -67,7 +90,10 @@
               </div>
             </div>
 
-            <!-- Contacts section now open by default with clickable links -->
+            <!-- =====================================================
+                 CONTACTS SECTION - Contact Information
+                 Email, phone, resume links with clickable icons
+                 ===================================================== -->
             <div class="sidebar-section">
               <button class="section-toggle active" data-section="contacts">
                 <span class="toggle-icon">▼</span>
@@ -80,14 +106,12 @@
                     >ayushnayak062@gmail.com</a
                   >
                 </div>
-                <!-- <CHANGE> Updated phone number to +91 77519 25590 with tel: link -->
                 <div class="contact-item">
                   <span class="contact-icon">📞</span>
                   <a href="tel:+917751925590" class="contact-link"
                     >+91 77519 25590</a
                   >
                 </div>
-                <!-- <CHANGE> Added Resume item that opens in new tab -->
                 <div class="contact-item">
                   <span class="contact-icon">📄</span>
                   <a
@@ -101,9 +125,14 @@
             </div>
           </aside>
 
-          <!-- Editor Panel -->
-          <div class="editor-panel">
-            <!-- Active tab bar extends to right edge, pushes panel down -->
+          <!-- =====================================================
+     CONTENT AREA - Editor Group
+     Tab bar + panels grouped like IDE
+     ===================================================== -->
+          <div class="content-area">
+            <!-- =====================================================
+       TAB BAR - FULL WIDTH (FIX)
+       ===================================================== -->
             <div class="tab-bar">
               <div class="tab active" data-file="bio">
                 <span id="currentTab">bio</span>
@@ -111,62 +140,72 @@
               </div>
             </div>
 
-            <!-- Bio content now displays by default with real profile information -->
-            <div class="editor-content">
-              <div class="line-numbers" id="lineNumbers"></div>
-              <div class="code-editor">
-                <pre id="codeContent"><code>/**
+            <!-- =====================================================
+       PANELS ROW
+       ===================================================== -->
+            <div class="content-row">
+              <!-- EDITOR PANEL -->
+              <div class="editor-panel">
+                <div class="editor-content">
+                  <div class="line-numbers" id="lineNumbers"></div>
+                  <div class="code-editor">
+                    <pre id="codeContent"><code>/**
  * About me
  * I have 2+ years of experience building immersive
- * gameplay systems, VR training simulators, and 
- * multiplayer experiences. Strong focus on 
+ * gameplay systems, VR training simulators, and
+ * multiplayer experiences. Strong focus on
  * performance, system design, and player experience.
- * 
+ *
  * Passionate about indie games, experimental mechanics,
- * and narrative-driven design. I love creating 
+ * and narrative-driven design. I love creating
  * interactive experiences that push the boundaries
  * of what's possible in Unity and VR.
- * 
+ *
  * Currently working on XR training solutions and
  * exploring new ways to make games more engaging
  * and accessible.
  */</code></pre>
-              </div>
-            </div>
-          </div>
-
-          <!-- Replaced code snippets with Gameplay Systems Panel -->
-          <div class="snippets-panel">
-            <div class="snippets-header">
-              <p class="comment">// Gameplay Systems</p>
-            </div>
-
-            <div class="gameplay-systems">
-              <div class="system-category">
-                <h3 class="category-title">[Gameplay Systems]</h3>
-                <ul class="system-list">
-                  <li>Player Controller (state-driven)</li>
-                  <li>Enemy AI (FSM / Behavior Trees)</li>
-                  <li>Combat & Interaction Loop</li>
-                  <li>Physics-based Interactions</li>
-                  <li>Animation State Synchronization</li>
-                </ul>
+                  </div>
+                </div>
               </div>
 
-              <div class="system-category">
-                <h3 class="category-title">[XR Systems]</h3>
-                <ul class="system-list">
-                  <li>Input Abstraction (Controllers / Gestures)</li>
-                  <li>Haptics Integration</li>
-                  <li>Training Scenario Logic</li>
-                  <li>Real-time Feedback Systems</li>
-                </ul>
+              <!-- SNIPPETS PANEL -->
+              <div class="snippets-panel">
+                <div class="snippets-header">
+                  <p class="comment">// Gameplay Systems</p>
+                </div>
+
+                <div class="gameplay-systems">
+                  <div class="system-category">
+                    <h3 class="category-title">[Gameplay Systems]</h3>
+                    <ul class="system-list">
+                      <li>Player Controller (state-driven)</li>
+                      <li>Enemy AI (FSM / Behavior Trees)</li>
+                      <li>Combat & Interaction Loop</li>
+                      <li>Physics-based Interactions</li>
+                      <li>Animation State Synchronization</li>
+                    </ul>
+                  </div>
+
+                  <div class="system-category">
+                    <h3 class="category-title">[XR Systems]</h3>
+                    <ul class="system-list">
+                      <li>Input Abstraction (Controllers / Gestures)</li>
+                      <li>Haptics Integration</li>
+                      <li>Training Scenario Logic</li>
+                      <li>Real-time Feedback Systems</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </main>
 
-        <!-- Footer -->
+        <!-- =====================================================
+             FOOTER - Fixed Bottom Bar
+             Social links in terminal-style layout
+             ===================================================== -->
         <footer class="main-footer">
           <div class="footer-left">
             <span class="footer-text">find me in:</span>
@@ -176,6 +215,7 @@
               class="footer-icon"
               aria-label="LinkedIn"
             >
+              <!-- LinkedIn Icon SVG -->
               <svg
                 viewBox="-2 -2 24 24"
                 width="20"
@@ -198,6 +238,7 @@
               aria-label="GitHub"
             >
               <span>@ayushnayak062</span>
+              <!-- GitHub Icon SVG -->
               <svg
                 width="20"
                 height="20"
@@ -216,6 +257,10 @@
       </div>
     </div>
 
+    <!-- =====================================================
+         JAVASCRIPT - Interactive Functionality
+         File switching, sidebar toggles, and responsive behavior
+         ===================================================== -->
     <script src="../js/navigation.js"></script>
     <script src="../js/typing.js"></script>
   </body>

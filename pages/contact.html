@@ -92,7 +92,13 @@
           </aside>
 
           <!-- Form Panel -->
-          <div class="form-panel">
+          <!-- =====================================================
+     CONTENT AREA - Contact Editor Group
+     ===================================================== -->
+          <div class="content-area">
+            <!-- =====================================================
+       TAB BAR - FULL WIDTH
+       ===================================================== -->
             <div class="tab-bar">
               <div class="tab active">
                 <span>contacts</span>
@@ -100,66 +106,69 @@
               </div>
             </div>
 
-            <form
-              class="contact-form"
-              id="contactForm"
-              action="https://formspree.io/f/mbdrodjr"
-              method="POST"
-            >
-              <div class="form-group">
-                <label for="name">_name:</label>
-                <input type="text" id="name" name="name" required />
+            <!-- =====================================================
+       PANELS ROW
+       ===================================================== -->
+            <div class="content-row">
+              <!-- FORM PANEL -->
+              <div class="form-panel">
+                <form
+                  class="contact-form"
+                  id="contactForm"
+                  action="https://formspree.io/f/mbdrodjr"
+                  method="POST"
+                >
+                  <div class="form-group">
+                    <label for="name">_name:</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">_email:</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">_message:</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="8"
+                      placeholder="your message here ..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="submit-btn">
+                    submit-message
+                  </button>
+                </form>
               </div>
 
-              <div class="form-group">
-                <label for="email">_email:</label>
-                <input type="email" id="email" name="email" required />
-              </div>
+              <!-- CODE PREVIEW PANEL -->
+              <div class="code-preview-panel">
+                <div class="line-numbers">
+                  <span>1</span><span>2</span><span>3</span><span>4</span>
+                  <span>5</span><span>6</span><span>7</span><span>8</span>
+                  <span>9</span><span>10</span><span>11</span><span>12</span>
+                </div>
 
-              <div class="form-group">
-                <label for="message">_message:</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="8"
-                  placeholder="your message here ..."
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="submit-btn">submit-message</button>
-            </form>
-          </div>
-
-          <!-- Code Preview Panel -->
-          <div class="code-preview-panel">
-            <div class="line-numbers">
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
-              <span>6</span>
-              <span>7</span>
-              <span>8</span>
-              <span>9</span>
-              <span>10</span>
-              <span>11</span>
-              <span>12</span>
-            </div>
-            <div class="code-display">
-              <pre><code><span class="keyword">const</span> <span class="variable">button</span> = <span class="function">document</span>.<span class="method">querySelector</span>(<span class="string">'#sendBtn'</span>);
+                <div class="code-display">
+                  <pre><code><span class="keyword">const</span> <span class="variable">button</span> =
+<span class="function">document</span>.<span class="method">querySelector</span>(<span class="string">'#sendBtn'</span>);
 
 <span class="keyword">const</span> <span class="variable">message</span> = {
   <span class="property">name</span>: <span class="string" id="previewName">""</span>,
   <span class="property">email</span>: <span class="string" id="previewEmail">""</span>,
   <span class="property">message</span>: <span class="string" id="previewMessage">""</span>,
-  <span class="property">date</span>: <span class="string" id="previewDate">"</span><span class="string" id="dateValue"></span><span class="string">"</span>
+  <span class="property">date</span>: <span class="string">"</span><span class="string" id="dateValue"></span><span class="string">"</span>
 }
 
 <span class="variable">button</span>.<span class="method">addEventListener</span>(<span class="string">'click'</span>, () => {
   <span class="variable">form</span>.<span class="method">send</span>(<span class="variable">message</span>);
 })</code></pre>
+                </div>
+              </div>
             </div>
           </div>
         </main>

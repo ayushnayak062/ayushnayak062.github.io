@@ -377,8 +377,24 @@ main {
   background: var(--bg-tertiary);
   height: 42px;
   flex-shrink: 0;
+  position: relative;
+}
+.tab-close {
+  position: relative;
 }
 
+/* Vertical terminal divider after × */
+.tab-close::after {
+  content: "";
+  position: absolute;
+  right: -12px; /* spacing after × */
+  top: -8px; /* extend to tab bar top */
+  height: calc(100% + 16px); /* full tab bar height */
+  width: 1px;
+  background: var(--border-color);
+  opacity: 0.6;
+  pointer-events: none;
+}
 .tab {
   display: flex;
   align-items: center;
@@ -722,7 +738,14 @@ textarea {
   background: var(--bg-code);
   padding: var(--spacing-md);
   border-radius: var(--radius-sm);
-  overflow-x: auto;
+  overflow-x: hidden;
+}
+
+.code-display pre,
+.code-display code {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
 }
 
 .code-display pre {
@@ -744,4 +767,17 @@ textarea {
 
 .external-icon {
   font-size: 1rem;
+}
+/* Editor group wrapper */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.content-row {
+  display: flex;
+  flex: 1;
+  min-height: 0;
 }

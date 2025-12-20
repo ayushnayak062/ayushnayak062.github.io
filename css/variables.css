@@ -1,59 +1,85 @@
-/* CSS Variables for consistent theming */
+/* =====================================================
+   DESIGN SYSTEM VARIABLES
+   VS Code Dark Theme - Terminal-inspired portfolio
+   ===================================================== */
+
 :root {
-  /* Colors - Dark VS Code theme */
-  --bg-primary: #010c15;
-  --bg-secondary: #011221;
-  --bg-tertiary: #011627;
-  --bg-code: #01111d;
+  /* -----------------------------------------------------
+     COLOR PALETTE - VS Code Dark Theme
+     Intent: Professional developer aesthetic, high contrast for readability
+     Consistent with popular IDEs to reduce cognitive load
+     ----------------------------------------------------- */
 
-  /* Borders and Lines */
-  --border-color: #1e2d3d;
-  --border-active: #fea55f;
+  /* Background Layers (darkest to lightest) */
+  --bg-primary: #010c15; /* Deepest background */
+  --bg-secondary: #011221; /* Secondary surfaces */
+  --bg-tertiary: #011627; /* Tertiary surfaces (nav/footer) */
+  --bg-code: #01111d; /* Code editor background */
 
-  /* Text Colors */
-  --text-primary: #607b96;
-  --text-secondary: #e5e9f0;
-  --text-white: #ffffff;
-  --text-comment: #607b96;
+  /* Borders and Dividers */
+  --border-color: #1e2d3d; /* Subtle borders */
+  --border-active: #fea55f; /* Active state borders */
 
-  /* Syntax Highlighting */
-  --color-keyword: #c792ea;
-  --color-function: #82aaff;
-  --color-string: #e99287;
-  --color-variable: #e5e9f0;
-  --color-number: #f78c6c;
-  --color-class: #ffcb6b;
-  --color-property: #4ec9b0;
+  /* Text Hierarchy */
+  --text-primary: #607b96; /* Secondary text (comments, labels) */
+  --text-secondary: #e5e9f0; /* Primary text content */
+  --text-white: #ffffff; /* Headlines and highlights */
+  --text-comment: #607b96; /* Comments (same as primary for consistency) */
 
-  /* Accent Colors */
-  --accent-orange: #fea55f;
-  --accent-cyan: #43d9ad;
-  --accent-purple: #c98bdf;
-  --accent-blue: #4d5bce;
+  /* -----------------------------------------------------
+     SYNTAX HIGHLIGHTING - Code Editor Colors
+     ----------------------------------------------------- */
 
-  /* Gradient Background */
-  --gradient-teal: #43d9ad;
-  --gradient-blue: #4d5bce;
+  --color-keyword: #c792ea; /* Keywords (if, function, etc.) */
+  --color-function: #82aaff; /* Function names */
+  --color-string: #e99287; /* String literals */
+  --color-variable: #e5e9f0; /* Variables */
+  --color-number: #f78c6c; /* Numbers */
+  --color-class: #ffcb6b; /* Class names */
+  --color-property: #4ec9b0; /* Properties */
 
-  /* Fonts */
+  /* -----------------------------------------------------
+     ACCENT COLORS - Interactive Elements
+     ----------------------------------------------------- */
+
+  --accent-orange: #fea55f; /* Primary accent (buttons, active states) */
+  --accent-cyan: #43d9ad; /* Secondary accent (links, highlights) */
+  --accent-purple: #c98bdf; /* Tertiary accent */
+  --accent-blue: #4d5bce; /* Quaternary accent */
+
+  /* -----------------------------------------------------
+     TYPOGRAPHY - Monospace Terminal Aesthetic
+     ----------------------------------------------------- */
+
   --font-mono: "Fira Code", "Consolas", "Monaco", "Courier New", monospace;
 
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
+  /* -----------------------------------------------------
+     SPACING SCALE - Consistent Rhythm
+     ----------------------------------------------------- */
 
-  /* Border Radius */
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
+  --spacing-xs: 0.5rem; /* 8px - Tight spacing */
+  --spacing-sm: 1rem; /* 16px - Default spacing */
+  --spacing-md: 1.5rem; /* 24px - Generous spacing */
+  --spacing-lg: 2rem; /* 32px - Large spacing */
+  --spacing-xl: 3rem; /* 48px - Extra large spacing */
 
-  :root {
-    --nav-height: 56px;
-    --footer-height: 56px;
-  }
+  /* -----------------------------------------------------
+     BORDER RADIUS - Soft Corners
+     ----------------------------------------------------- */
 
-  /* Transitions */
-  --transition: all 0.3s ease;
+  --radius-sm: 0.5rem; /* 8px - Small elements */
+  --radius-md: 0.75rem; /* 12px - Larger elements */
+
+  /* -----------------------------------------------------
+     COMPONENT SIZES - Fixed Heights
+     ----------------------------------------------------- */
+
+  --nav-height: 56px; /* Navigation bar height */
+  --footer-height: 56px; /* Footer bar height */
+
+  /* -----------------------------------------------------
+     ANIMATIONS - Smooth Interactions
+     ----------------------------------------------------- */
+
+  --transition: all 0.3s ease; /* Default transition for interactive elements */
 }
