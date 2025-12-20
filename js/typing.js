@@ -6,10 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentTab = document.getElementById("currentTab");
   const sectionToggles = document.querySelectorAll(".section-toggle");
 
-  function isMobileView() {
-    return window.innerWidth <= 767;
-  }
-
   /* --------------------------------
      Content map
      -------------------------------- */
@@ -159,19 +155,34 @@ document.addEventListener("DOMContentLoaded", () => {
   /* --------------------------------
      Sidebar defaults (mobile vs desktop)
      -------------------------------- */
-  function applySidebarDefaults() {
+  const DESKTOP_BREAKPOINT = 1280;
+  let wasDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+
+  function collapseAllSections() {
     sectionToggles.forEach((toggle) => {
       const sectionId = toggle.dataset.section;
       const content = document.getElementById(sectionId);
       if (!content) return;
 
-      if (isMobileView()) {
-        toggle.classList.remove("active");
-        content.classList.remove("active");
-      }
+      toggle.classList.remove("active");
+      content.classList.remove("active");
     });
   }
 
-  applySidebarDefaults();
-  window.addEventListener("resize", applySidebarDefaults);
+  function syncSidebarWithViewport() {
+    const isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+
+    // Only collapse when crossing from desktop → non-desktop
+    if (wasDesktop && !isDesktop) {
+      collapseAllSections();
+    }
+
+    wasDesktop = isDesktop;
+  }
+
+  // Initial load
+  syncSidebarWithViewport();
+
+  // Resize listener
+  window.addEventListener("resize", syncSidebarWithViewport);
 });

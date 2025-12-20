@@ -247,7 +247,7 @@ main {
   width: 280px;
   background: var(--bg-tertiary);
   border-right: 1px solid var(--border-color);
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 /* Remove bottom border from sidebar sections to prevent overlapping lines */
@@ -436,6 +436,14 @@ main {
   color: var(--text-comment);
   line-height: 1.5rem;
 }
+.sidebar,
+.snippets-panel,
+.editor-panel,
+.projects-content,
+.form-panel,
+.code-preview-panel {
+  overflow-y: visible;
+}
 /* --------------------------------
    Comment line rendering (responsive-safe)
    -------------------------------- */
@@ -454,7 +462,7 @@ main {
   width: 600px;
   background: var(--bg-secondary);
   padding: var(--spacing-md);
-  overflow-y: auto;
+  /* overflow-y: auto; */
   border-left: 2px solid var(--border-color);
 }
 

@@ -10,12 +10,13 @@
 @media (max-width: 1279px) {
   .app-window {
     max-width: 100%;
-    height: auto;
-    max-height: none;
+    /* height: auto;
+    max-height: none; */
   }
 
   main {
-    flex-direction: column;
+    /* flex-direction: column; */
+    overflow-y: auto;
   }
 
   .about-container,
@@ -46,7 +47,7 @@
    Tablets & mobile
    (Below 768px)
    ----------------------------------------------------- */
-@media (max-width: 767px) {
+@media (max-width: 916px) {
   /* --------------------------------
      FIX CODE CONTENT SIDE SCROLL
      -------------------------------- */
