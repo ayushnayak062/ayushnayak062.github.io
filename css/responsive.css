@@ -45,7 +45,7 @@
 
 /* -----------------------------------------------------
    Tablets & mobile
-   (Below 768px)
+   (Below 916px)
    ----------------------------------------------------- */
 @media (max-width: 916px) {
   /* --------------------------------
@@ -178,6 +178,14 @@
   .footer-icon,
   .footer-github {
     padding: 0 1rem;
+  }
+  .footer-github span {
+    display: none;
+  }
+
+  .footer-github {
+    margin-left: auto; /* pushes it to the right */
+    padding: 0 1rem; /* keeps touch-friendly spacing */
   }
 }
 

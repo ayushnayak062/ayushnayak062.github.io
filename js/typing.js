@@ -157,6 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
      -------------------------------- */
   const DESKTOP_BREAKPOINT = 1280;
   let wasDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+  let isInitialLoad = true;
 
   function collapseAllSections() {
     sectionToggles.forEach((toggle) => {
@@ -172,12 +173,18 @@ document.addEventListener("DOMContentLoaded", () => {
   function syncSidebarWithViewport() {
     const isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
 
-    // Only collapse when crossing from desktop → non-desktop
-    if (wasDesktop && !isDesktop) {
+    // 1. Initial load rule
+    if (isInitialLoad && !isDesktop) {
+      collapseAllSections();
+    }
+
+    // 2. Desktop → non-desktop transition rule
+    if (!isInitialLoad && wasDesktop && !isDesktop) {
       collapseAllSections();
     }
 
     wasDesktop = isDesktop;
+    isInitialLoad = false;
   }
 
   // Initial load
