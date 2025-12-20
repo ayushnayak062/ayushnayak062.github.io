@@ -544,6 +544,49 @@ main {
   padding: var(--spacing-lg);
   /* overflow-y: auto; */
 }
+/* =========================================
+   PROJECTS – FILTER TOP BAR
+   (same visual role as .tab-bar)
+   ========================================= */
+
+.projects-tab-bar {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap; /* allow multiple filters */
+  min-height: 42px; /* SAME as .tab-bar */
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+.project-filter-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md);
+  height: 42px;
+  border-right: 1px solid var(--border-color);
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.project-filter-tab:hover {
+  background: var(--bg-secondary);
+  color: var(--text-white);
+}
+.project-filter-close {
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.project-filter-close:hover {
+  opacity: 1;
+}
+.projects-container .content-row {
+  display: block;
+}
 
 .filter-tags {
   display: flex;
