@@ -75,7 +75,7 @@
           <!-- NEW: content-area (same role as About / Contact) -->
           <div class="content-area">
             <!-- NEW: Projects top bar -->
-            <div class="projects-tab-bar hidden" id="projectFilterBar">
+            <div class="projects-tab-bar" id="projectFilterBar">
               <!-- active filters injected by JS -->
             </div>
             <!-- Padding absorber (critical) -->
@@ -257,22 +257,16 @@
           .filter((cb) => cb.checked)
           .map((cb) => cb.value);
 
-        // Update tags display
-        if (activeFilters.length === 0) {
-          filterBar.classList.add("hidden");
-          filterBar.innerHTML = "";
-        } else {
-          filterBar.classList.remove("hidden");
-          filterBar.innerHTML = activeFilters
-            .map(
-              (filter) => `
+        // render filter tabs into #projectFilterBar
+        if (activeFilters.length > 0) {
+          filterBar.innerHTML = `
         <div class="project-filter-tab">
-          <span>${filter}</span>
-          <span class="project-filter-close" data-filter="${filter}">×</span>
+          <span>${activeFilters.join(" ; ")}</span>
+          <span class="project-filter-close">×</span>
         </div>
-      `
-            )
-            .join("");
+      `;
+        } else {
+          filterBar.innerHTML = "";
         }
 
         // Filter projects
@@ -287,11 +281,7 @@
         // Add event listeners to remove buttons
         document.querySelectorAll(".project-filter-close").forEach((btn) => {
           btn.addEventListener("click", () => {
-            const filter = btn.dataset.filter;
-            const checkbox = Array.from(checkboxes).find(
-              (cb) => cb.value === filter
-            );
-            if (checkbox) checkbox.checked = false;
+            checkboxes.forEach((cb) => (cb.checked = false));
             updateFilters();
           });
         });
