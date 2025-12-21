@@ -553,7 +553,7 @@ main {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  min-height: 42px;
+  min-height: 43px;
   background: var(--bg-tertiary);
   border-bottom: 1px solid var(--border-color);
   flex-shrink: 0;
