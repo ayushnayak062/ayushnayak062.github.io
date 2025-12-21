@@ -557,7 +557,7 @@ main {
   align-items: stretch;
   flex-wrap: wrap;
   min-height: 43px;
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
   flex-shrink: 0;
   transition: opacity 0.15s ease;
@@ -596,6 +596,7 @@ main {
 .projects-container .content-row {
   display: flex;
   flex-direction: column;
+  background: var(--bg-secondary);
 }
 
 .filter-tags {
