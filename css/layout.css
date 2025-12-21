@@ -253,6 +253,9 @@ main {
   /* overflow-y: auto; */
   flex-shrink: 0;
   align-self: stretch;
+  height: 100%;
+  position: sticky;
+  top: 0;
 }
 
 /* Remove bottom border from sidebar sections to prevent overlapping lines */
@@ -362,6 +365,16 @@ main {
   gap: var(--spacing-xs);
   padding: var(--spacing-xs);
   font-size: 0.875rem;
+}
+
+.contact-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-link:hover {
+  color: var(--text-white);
 }
 
 /* Editor Panel */
@@ -575,7 +588,7 @@ main {
   height: 42px;
   border-right: 1px solid var(--border-color);
   font-family: var(--font-mono);
-  color: var(--text-primary);
+  color: var(--text-white);
   white-space: nowrap;
 }
 
