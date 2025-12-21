@@ -31,6 +31,8 @@
     width: 100%;
     border-right: none;
     border-bottom: 1px solid var(--border-color);
+    height: auto;
+    min-height: auto;
   }
 
   .snippets-panel,
