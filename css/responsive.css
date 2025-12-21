@@ -33,6 +33,7 @@
     border-bottom: 1px solid var(--border-color);
     height: auto;
     min-height: auto;
+    position: relative;
   }
 
   .snippets-panel,
