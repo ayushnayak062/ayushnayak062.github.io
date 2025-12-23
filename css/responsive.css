@@ -21,7 +21,8 @@
 
   .about-container,
   .projects-container,
-  .contact-container {
+  .contact-container,
+  .project-detail-container {
     flex-direction: column;
   }
   .content-row {
@@ -37,7 +38,8 @@
   }
 
   .snippets-panel,
-  .code-preview-panel {
+  .code-preview-panel,
+  .project-media-panel {
     width: 100%;
     border-left: none;
     border-top: 1px solid var(--border-color);
@@ -124,7 +126,9 @@
   .editor-panel,
   .snippets-panel,
   .projects-content,
-  .form-panel {
+  .form-panel,
+  .project-text-panel,
+  .project-media-panel {
     height: auto;
     min-height: auto;
   }
