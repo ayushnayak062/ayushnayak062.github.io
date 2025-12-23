@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGL Prototype - Ayush Nayak</title>
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/terminal.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <!-- Wrapped in viewport container for global app window -->
+    <div class="viewport">
+      <div class="app-window">
+        <!-- Updated navigation structure to match homepage -->
+        <nav class="main-nav">
+          <div class="nav-left">
+            <!-- Updated nav-name to use fixed-width matching system info width -->
+            <span class="nav-name">ayush-nayak</span>
+            <a href="../index.html" class="nav-link">_hello</a>
+            <a href="about.html" class="nav-link">_about-me</a>
+            <a href="projects.html" class="nav-link active">_projects</a>
+          </div>
+          <div class="nav-right">
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+            <a href="contact.html" class="nav-link">_contact-me</a>
+          </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="projects-container">
+          <!-- Sidebar with Project Metadata -->
+          <aside class="sidebar">
+            <div class="sidebar-section">
+              <button class="section-toggle active">
+                <span class="toggle-icon">▼</span>
+                <span>project-info</span>
+              </button>
+              <div class="section-content active">
+                <p
+                  style="
+                    color: var(--text-primary);
+                    margin-bottom: var(--spacing-sm);
+                  "
+                >
+                  <strong>Technologies:</strong> Unity, WebGL
+                </p>
+                <p
+                  style="
+                    color: var(--text-primary);
+                    margin-bottom: var(--spacing-sm);
+                  "
+                >
+                  <strong>Status:</strong> Coming Soon
+                </p>
+                <p
+                  style="
+                    color: var(--text-primary);
+                    margin-bottom: var(--spacing-sm);
+                  "
+                >
+                  <strong>Platform:</strong> Web Browsers
+                </p>
+                <p style="color: var(--text-primary)">
+                  <strong>Links:</strong> Coming Soon
+                </p>
+              </div>
+            </div>
+          </aside>
+          <!-- Content Area with Editor Tab -->
+          <div class="content-area">
+            <!-- Editor-style tab bar -->
+            <div class="project-editor-tab-bar">
+              <div class="project-editor-tab">
+                <span>// _webgl-prototype</span>
+                <span
+                  class="project-editor-close"
+                  onclick="window.location.href='projects.html'"
+                  >×</span
+                >
+              </div>
+            </div>
+            <!-- Content Row -->
+            <div class="content-row">
+              <div class="projects-content">
+                <h2
+                  style="
+                    color: var(--text-white);
+                    margin-bottom: var(--spacing-md);
+                  "
+                >
+                  WebGL Prototype
+                </h2>
+                <p
+                  style="
+                    color: var(--text-primary);
+                    margin-bottom: var(--spacing-md);
+                  "
+                >
+                  Coming Soon - Browser-based game prototype built with Unity
+                  WebGL for instant play experiences.
+                </p>
+                <p
+                  style="
+                    color: var(--text-primary);
+                    margin-bottom: var(--spacing-lg);
+                  "
+                >
+                  This WebGL prototype will demonstrate Unity's web deployment
+                  capabilities, featuring optimized performance for browser
+                  gameplay and seamless cross-platform compatibility.
+                </p>
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Cdefs%3E%3ClinearGradient id='grad4' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%235433FF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2320BDFF;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='200' fill='url(%23grad4)'/%3E%3Ctext x='150' y='100' font-family='monospace' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'%3EWebGL Game%3C/text%3E%3C/svg%3E"
+                  alt="WebGL Prototype"
+                  style="
+                    max-width: 100%;
+                    height: auto;
+                    border: 1px solid var(--border-color);
+                    border-radius: var(--radius-sm);
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+          <div class="footer-left">
+            <span class="footer-text">find me in:</span>
+            <a
+              href="https://linkedin.com/in/ayushnayak062"
+              target="_blank"
+              class="footer-icon"
+              aria-label="LinkedIn"
+            >
+              <svg
+                viewBox="-2 -2 24 24"
+                width="20"
+                height="20"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M19.959 11.719v7.379h-4.278v-6.885c0-1.73-.619-2.91-2.167-2.91-1.182 0-1.886.796-2.195 1.565-.113.275-.142.658-.142 1.043v7.187h-4.28s.058-11.66 0-12.869h4.28v1.824l-.028.042h.028v-.042c.568-.875 1.583-2.126 3.856-2.126 2.815 0 4.926 1.84 4.926 5.792zM2.421.026C.958.026 0 .986 0 2.249c0 1.235.93 2.224 2.365 2.224h.028c1.493 0 2.42-.989 2.42-2.224C4.787.986 3.887.026 2.422.026zM.254 19.098h4.278V6.229H.254v12.869z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="footer-right">
+            <a
+              href="https://github.com/ayushnayak062"
+              target="_blank"
+              class="footer-github"
+              aria-label="GitHub"
+            >
+              <span>@ayushnayak062</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sectionToggles = document.querySelectorAll(".section-toggle");
+
+        if (!sectionToggles.length) return;
+
+        // Toggle click behavior (same as About)
+        sectionToggles.forEach((toggle) => {
+          const content = toggle.nextElementSibling;
+          if (!content) return;
+
+          toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+            content.classList.toggle("active");
+          });
+        });
+
+        /* --------------------------------
+       Sidebar defaults (desktop vs compact/mobile)
+       -------------------------------- */
+        const DESKTOP_BREAKPOINT = 1280;
+        let wasDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+        let isInitialLoad = true;
+
+        function collapseAllSections() {
+          sectionToggles.forEach((toggle) => {
+            const content = toggle.nextElementSibling;
+            if (!content) return;
+
+            toggle.classList.remove("active");
+            content.classList.remove("active");
+          });
+        }
+
+        function syncSidebarWithViewport() {
+          const isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+
+          // Initial load below desktop
+          if (isInitialLoad && !isDesktop) {
+            collapseAllSections();
+          }
+
+          // Desktop → non-desktop transition
+          if (!isInitialLoad && wasDesktop && !isDesktop) {
+            collapseAllSections();
+          }
+
+          wasDesktop = isDesktop;
+          isInitialLoad = false;
+        }
+
+        syncSidebarWithViewport();
+        window.addEventListener("resize", syncSidebarWithViewport);
+      });
+    </script>
+  </body>
+</html>

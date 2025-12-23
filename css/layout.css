@@ -606,6 +606,43 @@ main {
 .project-filter-close:hover {
   opacity: 1;
 }
+
+/* =========================================
+   PROJECT DETAIL – EDITOR TAB BAR
+   (editor-style tab for project detail pages)
+   ========================================= */
+
+.project-editor-tab-bar {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.project-editor-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-right: 1px solid var(--border-color);
+  color: var(--text-white);
+  height: 100%;
+  flex: 1;
+  font-family: var(--font-mono);
+}
+
+.project-editor-close {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  padding: 0;
+  cursor: pointer;
+  margin-left: var(--spacing-md);
+}
+
+.project-editor-close:hover {
+  color: var(--text-white);
+}
 .projects-container .content-row {
   display: flex;
   flex-direction: column;
@@ -707,6 +744,11 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
 }
 
 .settings-btn {
