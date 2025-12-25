@@ -916,3 +916,101 @@ textarea {
   padding: var(--spacing-md);
   border-left: 2px solid var(--border-color);
 }
+
+/* =========================================
+   PROJECT GALLERY - VS Code Style Image Gallery
+   ========================================= */
+
+.gallery-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gallery-container h3 {
+  color: var(--accent-cyan);
+  margin-bottom: var(--spacing-lg);
+  font-size: 14px;
+  margin-top: 0;
+  font-family: var(--font-mono);
+}
+
+/* Image Gallery - Code Block Style with VS Code Container */
+.image-item {
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-primary);
+  transition: border-color 0.2s ease;
+}
+
+.image-item:hover {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 1px rgba(0, 122, 204, 0.25);
+}
+
+/* VS Code style header */
+.image-header {
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 35px;
+}
+
+.image-header-dots {
+  display: flex;
+  gap: 6px;
+  padding: 0 12px;
+  color: var(--text-primary);
+  font-size: 10px;
+  flex-shrink: 0;
+  letter-spacing: 2px;
+}
+
+/* Inline code style label */
+.label-inline {
+  font-size: 12px;
+  color: var(--accent-orange);
+  background: transparent;
+  padding: 0 12px;
+  font-style: normal;
+  font-family: var(--font-mono);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 35px;
+}
+
+.label-inline::before {
+  content: "● ";
+  color: var(--accent-cyan);
+  margin-right: 6px;
+}
+
+/* Image wrapper with border matching VS Code */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-code);
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper img {
+  display: block;
+  max-width: 60%;
+  height: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: transform 0.3s ease, border-color 0.2s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.02);
+  border-color: var(--accent-blue);
+}
